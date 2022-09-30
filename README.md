@@ -9,7 +9,7 @@
 ### A good reference:
 
 1 - [official arc docs](https://wiki.archlinux.org/title/Installation_guide)<br>
-2 - [youtube](https://www.youtube.com/watch?v=RsrPrA8NJHk) / [youtube](https://www.youtube.com/watch?v=sm_fuBeaOqE) / [youtube](https://www.youtube.com/watch?v=JRdYSGh-g3s)<br>
+2 - [youtube](https://www.youtube.com/watch?v=RsrPrA8NJHk) / [youtube](https://www.youtube.com/watch?v=C3D_qzw94v8) / [youtube](https://www.youtube.com/watch?v=sm_fuBeaOqE) / [youtube](https://www.youtube.com/watch?v=JRdYSGh-g3s)<br>
 3 - [Stack Exchange Network](https://askubuntu.com/questions/726972/dual-boot-windows-10-and-linux-ubuntu-on-separate-hard-drives)<br>
 
 ---
@@ -21,9 +21,17 @@
   [rufus official downloads](https://rufus.ie/it/) and starto to create an <i>iso bootable</i> usb drive with arch iso image
   - raccommended: check your bios is an uefi:<br>
   ⠀...in bios you can find it in the options<br>
-  ⠀...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode)<br>
+  ⠀...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode), check if "secure boot" is off or set it via bitlocker<br>
   - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): GPT, UEFI, FAT32, 8192byte, and load iso of arch.
   <br>
+
+- restart and boot way:<br>
+  a) go to bios and start from usb (or set it first boot)<br>
+  b) via windows:<br>
+ ⠀⠀⠀1) open win menu and find "startup"<br>
+ ⠀⠀⠀2) open "advanced sturtup recovery" (ITA:modifica le opzioni di avvio avanzato)<br>
+ ⠀⠀⠀3) click on "advanced sturtup" > "use a device" > select your bootable arch usb<br>
+
 
 - Test connection:<br>
 
