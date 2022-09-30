@@ -13,17 +13,27 @@
 3 - [Stack Exchange Network](https://askubuntu.com/questions/726972/dual-boot-windows-10-and-linux-ubuntu-on-separate-hard-drives)<br>
 
 ---
+<br>
 
 - download arch iso linux:<br>
   [archlinux official downloads](https://archlinux.org/download/) > select "Magnet link"
-  
+<br><br>
+ 
 - download rufus:<br>
   [rufus official downloads](https://rufus.ie/it/) and starto to create an <i>iso bootable</i> usb drive with arch iso image
   - raccommended: check your bios is an uefi:<br>
   ⠀...in bios you can find it in the options<br>
   ⠀...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode), check if "secure boot" is off or set it via bitlocker<br>
   - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): GPT, UEFI, FAT32, 8192byte, and load iso of arch.
-  <br>
+<br><br>
+
+- no second drive? need a partition:
+  - via linux terminal [(this link)](https://phoenixnap.com/kb/linux-create-partition)
+  - in windows:<br>
+    - win+r and write "diskmgmt.msc"
+    - right click on NFTS window partition and shrink it with min 6GB for linux<br>
+    <small><i>warning, if you not an expert see on youtube before this action!</i></small>
+<br><br>
 
 - restart and boot way:<br>
   a) go to bios and start from usb (or set it first boot)<br>
@@ -31,7 +41,7 @@
  ⠀⠀⠀1) open win menu and find "startup"<br>
  ⠀⠀⠀2) open "advanced sturtup recovery" (ITA:modifica le opzioni di avvio avanzato)<br>
  ⠀⠀⠀3) click on "advanced sturtup" > "use a device" > select your bootable arch usb<br>
-
+<br><br>
 
 - Test connection:<br>
 
@@ -48,6 +58,7 @@
         ⠀⠀⠀⠀`[iwd]# station DEVICE get-networks`<br>
         ⠀⠀⠀4)⠀Finally, to connect to a network:<br>
         ⠀⠀⠀⠀`[iwd]# station DEVICE connect SSID`<br>
+<br><br>
 
 - Install on disk:
 
