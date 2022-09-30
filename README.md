@@ -52,3 +52,5 @@
   Enter on [ write ]
 
   If you read "syncing disks" you're rady
+
+- coming soon...
