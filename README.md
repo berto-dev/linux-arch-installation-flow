@@ -19,9 +19,9 @@
   
 - download rufus:<br>
   [rufus official downloads](https://rufus.ie/it/) and starto to create an <i>iso bootable</i> usb drive with arch iso image
-  - raccommended: check your bios is an uefi:
-    ...in bios you can find it in the options
-    ...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode)
+  - raccommended: check your bios is an uefi:<br>
+  ⠀...in bios you can find it in the options<br>
+  ⠀...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode)<br>
   - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): GPT, UEFI, FAT32, 8192byte, and load iso of arch.
   <br>
 
@@ -29,39 +29,25 @@
 
   `$ ping archlinux.org`<br>
 
-  If not working:<br>
-
-  (Check if exist a wlan)<br>
-  `$ ip a`
-
-  (if exist...)<br>
-  `$ Iwtcl`
-
-  First, if you do not know your wireless device name, list all Wi-Fi devices:
-
-  `[iwd]# device list`
-
-  Then, to initiate a scan for networks (note that this command will not output anything):
-
-  `[iwd]# station DEVICE scan`
-
-  You can then list all available networks:
-
-  `[iwd]# station DEVICE get-networks`
-
-  Finally, to connect to a network:
-
-  `[iwd]# station DEVICE connect SSID`
-
+   ...If not working:<br>
+      └ Check if exist a wlan : `$ ip a`<br>
+        └ if exist: `$ Iwtcl` and...<br>
+        ⠀⠀⠀1) First, if you do not know your wireless device name, list all Wi-Fi devices:<br>
+        ⠀⠀⠀⠀`[iwd]# device list`<br>
+        ⠀⠀⠀2) Then, to initiate a scan for networks (note that this command will not output anything):<br>
+        ⠀⠀⠀⠀`[iwd]# station DEVICE scan`<br>
+        ⠀⠀⠀3)⠀You can then list all available networks:<br>
+        ⠀⠀⠀⠀`[iwd]# station DEVICE get-networks`<br>
+        ⠀⠀⠀4)⠀Finally, to connect to a network:<br>
+        ⠀⠀⠀⠀`[iwd]# station DEVICE connect SSID`<br>
 
 - Install on disk:
 
-  `$cfdisk`
+  `$cfdisk`<br>
 
-  Select gpt (it's for over 2t disks)
-
-  Get 2G of SSD, set type: Linux Swap
-  Get other of SSD, set type: Linux system
+  ⠀...Select gpt (it's for over 2t disks)<br>
+  ⠀...Get 2G of SSD, set type: Linux Swap<br>
+  ⠀...Get other of SSD, set type: Linux system<br>
 
   Enter on [ write ]
 
