@@ -9,7 +9,7 @@
 ### A good reference:
 
 1 - [official arc docs](https://wiki.archlinux.org/title/Installation_guide)<br>
-2 - [youtube](https://www.youtube.com/watch?v=RsrPrA8NJHk)<br>
+2 - [youtube](https://www.youtube.com/watch?v=RsrPrA8NJHk) / [youtube](https://www.youtube.com/watch?v=sm_fuBeaOqE) / [youtube](https://www.youtube.com/watch?v=JRdYSGh-g3s)<br>
 3 - [Stack Exchange Network](https://askubuntu.com/questions/726972/dual-boot-windows-10-and-linux-ubuntu-on-separate-hard-drives)<br>
 
 ---
@@ -18,14 +18,13 @@
   [archlinux official downloads](https://archlinux.org/download/) > select "Magnet link"
   
 - download rufus:<br>
-  [rufus official downloads](https://rufus.ie/it/)
-  <br>  
-  - create an <i>iso bootable</i> usb drive with arch iso image
+  [rufus official downloads](https://rufus.ie/it/) and starto to create an <i>iso bootable</i> usb drive with arch iso image
   - raccommended: check your bios is an uefi:
-    - in bios (better) find it into the options
-    - in [windows](https://kb.parallels.com/115815#:~:text=Click%20the%20Search%20icon%20on,of%20BIOS%2C%20Legacy%20or%20UEFI): find "system information" and "BIOS"
-  - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): GPT UEFI, MBR, FAT32, 8192byte, and load iso of arch.
+    ...in bios you can find it in the options
+    ...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode)
+  - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): GPT, UEFI, FAT32, 8192byte, and load iso of arch.
   <br>
+
 - Test connection:<br>
 
   `$ ping archlinux.org`<br>
