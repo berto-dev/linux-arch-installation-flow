@@ -73,10 +73,11 @@
 
   Enter on [ write ]
 
-  now set a boot
+  If you read "syncing disks" you're ok, now set a boot:<br>
   `$ parted` > `$ print` > `$ add "N(number of partition)" "boot" "on"`
 
-  If you read "syncing disks" you're rady
+  <top><sub><i>NOTE: next step have better solution for make the partitions</i></sub></top>
+
 
 <br> <b>[STEP:3/3]</b>
 
