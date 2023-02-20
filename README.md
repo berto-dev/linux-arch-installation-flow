@@ -65,13 +65,16 @@
 
 - Install on disk (basic/obsoleted):
 
-  `$ cfdisk` (another way is "parted" and "print")<br>
+  `$ cfdisk`<br>
 
   ⠀...Select gpt (it's for over 2t disks)<br>
   ⠀...Get 2G of SSD, set type: Linux Swap<br>
   ⠀...Get other of SSD, set type: Linux system<br>
 
   Enter on [ write ]
+
+  now set a boot
+  `$ parted` > `$ print` > `$ add "N(number of partition)" "boot" "on"`
 
   If you read "syncing disks" you're rady
 
