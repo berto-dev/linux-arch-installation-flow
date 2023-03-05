@@ -184,6 +184,10 @@ AutomaticLogin=username
   via AUR:<br>
   - [Filemanager actions](https://archlinux.org/packages/community/x86_64/filemanager-actions/)<br>
 
+  via flathub:<br>
+  - [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
+  - [Gradience](https://flathub.org/apps/details/com.github.GradienceTeam.Gradience)
+
   via CLI:<br>
   - Grub Customizer:<br>
   `$ sudo pacman -S grub-customizer`<br>
