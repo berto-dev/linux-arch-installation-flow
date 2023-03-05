@@ -180,11 +180,13 @@ AutomaticLogin=username
   - [Weather in the clock](https://github.com/JasonLG1979/gnome-shell-extension-weather-in-the-clock/)
   - [Wi-Fi Qr](https://gitlab.gnome.org/glerro/gnome-shell-extension-wifiqrcode)
   - [Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)<br>
+
   via AUR:<br>
   - [Filemanager actions](https://archlinux.org/packages/community/x86_64/filemanager-actions/)<br>
+
   via CLI:<br>
   - Grub Customizer:<br>
-  `$ sudo pacman -S grub-customizer`
+  `$ sudo pacman -S grub-customizer`<br>
 
   preinstalled undebloatable ON/OFF list
   - Application Menu: OFF
