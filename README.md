@@ -77,7 +77,7 @@
   If you read "syncing disks" you're ok, now set a boot:<br>
   `$ parted` > `$ print` > `$ add "N(number of partition)" "boot" "on"`
 
-  <top><sub><i>NOTE: next step have better solution for make the partitions</i></sub></top>
+  NOTE: next step have better solution for make the partitions
 -->
 
 <br> <b>[STEP:3/3]</b>
@@ -102,7 +102,7 @@
     Installation completed? Reboot<br>
     
     - Now update and reboot system:<br>
-      `$ sudo pacman -Syu` <br>
+      `$ sudo pacman -Syu`<br>
       `$ sudo reboot`<br>
 
     - Use and prepare Packages <top><sub>(git/chrome/aur)</sub></top><br>
@@ -179,7 +179,12 @@ AutomaticLogin=username
   - [Vitals](https://github.com/corecoding/Vitals)
   - [Weather in the clock](https://github.com/JasonLG1979/gnome-shell-extension-weather-in-the-clock/)
   - [Wi-Fi Qr](https://gitlab.gnome.org/glerro/gnome-shell-extension-wifiqrcode)
-  - [Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)
+  - [Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)<br>
+  via AUR:<br>
+  - [Filemanager actions](https://archlinux.org/packages/community/x86_64/filemanager-actions/)<br>
+  via CLI:<br>
+  - Grub Customizer:<br>
+  `$ sudo pacman -S grub-customizer`
 
   preinstalled undebloatable ON/OFF list
   - Application Menu: OFF
