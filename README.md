@@ -158,6 +158,8 @@ AutomaticLogin=username
 
 <b>Essentials extension:</b>
 
+before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management 
+
   - [Add to desktop](https://github.com/Tommimon/add-to-desktop)
   - [Arch update alert icon](https://github.com/RaphaelRochet/arch-update)
   - [Blur on lockscreen](https://github.com/PRATAP-KUMAR/control-blur-effect-on-lock-screen) (optional)
