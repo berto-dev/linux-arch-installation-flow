@@ -244,7 +244,7 @@ open Theme-Pack folder and...<br>
 
 - add the wallpaper<br>
   `$ sudo mkdir -p /usr/share/wallpaper`<br>
-  `$ sudo cp -r ./wallpaper/* /usr/share/wallpaper && xdg-open /usr/share/wallpaper`<br><br>
+  `$ sudo cp -r ./wallpaper/* /usr/share/backgrounds/gnome`<br><br>
 
 
 - add Gradience color profile<br>
