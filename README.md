@@ -197,6 +197,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
   - [Removable drive in menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
   - [Settings center](https://extensions.gnome.org/extension/2899/settingscenter/)
+  - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
   - [Top bar organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
   - [Trayicons reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
   - [User themes](https://extensions.gnome.org/extension/19/user-themes/)
