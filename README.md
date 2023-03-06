@@ -193,7 +193,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Desktop icons neo](https://extensions.gnome.org/extension/4337/desktop-icons-neo/)
   - [Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)
   - [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
-  - [Just perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
+  - [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
   - [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
   - [Removable drive in menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
   - [Settings center](https://extensions.gnome.org/extension/2899/settingscenter/)
