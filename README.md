@@ -122,12 +122,17 @@
         `$ sudo chmod 777 ./* && cd ./google-chrome`<br>
         `$ makepkg -si && cd ..`<br>
         
-    - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console
-      `$ sudo git clone https://aur.archlinux.org/snapd.git ./snap-store ./snap-store`<br>
-      `$ sudo chmod 777 ./* && cd ./snap-store`<br>
+    - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console<br>
+      `$ sudo git clone https://aur.archlinux.org/snapd.git ./snapd`<br>
+      `$ sudo chmod -R 777 ./* && cd ./snapd`<br>
       `$ makepkg -si && cd ..`<br>
-      add classic snap-store icon:<br>
+      `$ sudo systemctl enable --now snapd.socket`<br>
+      add classic snap store icon:<br>
       `$ sudo ln -s /var/lib/snapd/snap /snap`<br>
+      add to gnome software:<br>
+      `$ sudo git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome`<br>
+      `$ sudo chmod -R 777 ./* && cd ./snap-gnome`<br>
+      `$ makepkg -si && cd ..`<br>
 
 
 <br><hr><br>
