@@ -98,6 +98,11 @@
     - set audio to pipewire
     - set kernel to zen
     - set net equal to iso configuration<br>
+
+    an image of installer:<br>
+    <top><sub>Attention: Select a desktop env (gnome or kde) and not "minimal" if your not expert to install it via cli!!</sub></top>
+    ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
+    ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS.jpg)
     
     Installation completed? Reboot<br>
     
@@ -140,7 +145,7 @@ AutomaticLogin=username
 
 <b>Debloat packs:</b><br>
 
-<top><sub><i>Note: Rscgn remove all dependencies (dangerous) of pack</i><br>
+<top><sub><i>Note: Rscgn remove all dependencies (dangerous) of pack</i></sub></top><br>
 
 - `$ sudo pacman -Q` <top><sub><i>(for list) (use "| grep NAMEPACK" for detect it)</i></sub></top><br>
 - `$ sudo pacman -Rsn gnome-contacts`<br>
@@ -210,7 +215,10 @@ before all: if you use chrome need to install [gnome browser connector](https://
 
 #### Add a simple shell theme packs (it's my simple theme asset)
 
-remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."
+1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.zip) and unzip it.
+
+2) copy file of theme...<br>
+remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."<br>
 
 - add shell theme (Based on Fluent-Round-White/Dark)<br>
   `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-White /usr/share/themes`<br>
