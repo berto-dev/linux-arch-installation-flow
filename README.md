@@ -231,8 +231,10 @@ remember: "gnome have the hidden folder for override (unlock hide file and searc
   `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Cursor /usr/share/icons` (yep, icons)<br>
 
 - add the wallpaper<br>
-  `$ sudo mkdir -p /usr/share/wallpaper && cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/wallpaper /usr/share/wallpaper` (yep, icons)<br>
+  `$ sudo mkdir -p /usr/share/wallpaper && cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/wallpaper /usr/share/wallpaper`<br><br>
 
+
+And this is the end... Good Luck Baby 🚀
   
   
 
