@@ -118,21 +118,21 @@
         `$ sudo pacman -S git`<br>
 
       - Use Aur for first time, exemple:<br>
-        `$ sudo git clone https://aur.archlinux.org/google-chrome.git ./google-chrome`<br>
-        `$ sudo chmod 777 ./* && cd ./google-chrome`<br>
+        `$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome` && cd ./google-chrome`<br>
         `$ makepkg -si && cd ..`<br>
         
     - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console<br>
-      `$ sudo git clone https://aur.archlinux.org/snapd.git ./snapd`<br>
-      `$ sudo chmod -R 777 ./* && cd ./snapd`<br>
+      `$ git clone https://aur.archlinux.org/snapd.git ./snapd && cd ./snapd`<br>
       `$ makepkg -si && cd ..`<br>
       `$ sudo systemctl enable --now snapd.socket`<br>
-      add classic snap store icon:<br>
       `$ sudo ln -s /var/lib/snapd/snap /snap`<br>
-      add to gnome software:<br>
-      `$ sudo git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome`<br>
-      `$ sudo chmod -R 777 ./* && cd ./snap-gnome`<br>
+      return in <i>./Packages</i> and add to gnome software:<br>
+      `$ git clone https://aur.archlinux.org/snapd-glib.git ./snap-glib && cd ./snap-glib`<br>
       `$ makepkg -si && cd ..`<br>
+      return in <i>./Packages</i> and add to gnome software:<br>
+      `$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snap-gnome`<br>
+      `$ makepkg -si && cd ..`<br>
+      <i>on question "remove gnome conflict" ... ever yes.</i><br>
 
 
 <br><hr><br>
