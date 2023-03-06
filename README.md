@@ -234,6 +234,10 @@ remember: "gnome have the hidden folder for override (unlock hide file and searc
   `$ sudo mkdir -p /usr/share/wallpaper && cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/wallpaper /usr/share/wallpaper`<br><br>
 
 
+- add Gradience color profile<br>
+  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/gradience/Shell-Colors.json  /home/YOUR_USR_NAME/.var/app/com.github.GradienceTeam.Gradience/config/presets/user`<br><br>
+
+
 And this is the end... Good Luck Baby 🚀
   
   
