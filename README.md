@@ -123,7 +123,7 @@
         `$ cd packages/google-chrome`<br>
         `$ makepkg -si`<br>
         
-    - Install (Snap Store)[https://snapcraft.io/install/snap-store/arch] in arch via consolle
+    - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console
 
 <br><hr><br>
 
