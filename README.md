@@ -206,4 +206,25 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - Window List: OFF
   - Workspace Indicator: OFF
 
+<br>
+
+#### Add ocean theme packs (it's my simple theme asset)
+
+remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."
+
+- add shell theme (Based on Fluent-Round-White/Dark)<br>
+  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-White /usr/share/themes`<br>
+  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Dark /usr/share/themes`<br>
+
+- add icons (Based on Depeen)<br>
+  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Icons /usr/share/icons`<br>
+
+- add icons (Based on Qogir)<br>
+  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Cursor /usr/share/icons` (yep, icons)<br>
+
+- add the wallpaper<br>
+  `$ sudo mkdir -p /usr/share/wallpaper && cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/wallpaper /usr/share/wallpaper` (yep, icons)<br>
+
+  
+  
 
