@@ -235,22 +235,20 @@ before all: if you use chrome need to install [gnome browser connector](https://
 2) copy file of theme...<br>
 remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."<br>
 
+open Theme-Pack folder and...<br>
 - add shell theme (Based on Fluent-Round-White/Dark)<br>
-  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-White /usr/share/themes`<br>
-  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Dark /usr/share/themes`<br>
+  `$ sudo cp -r ./themes/* /usr/share/themes`<br>
 
-- add icons (Based on Depeen)<br>
-  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Icons /usr/share/icons`<br>
-
-- add icons (Based on Qogir)<br>
-  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/Shell-Cursor /usr/share/icons` (yep, icons)<br>
+- add icons (Based on Depeen) and cursor (Based on Qogir)<br>
+  `$ sudo cp -r ./icons/* /usr/share/icons`<br>
 
 - add the wallpaper<br>
-  `$ sudo mkdir -p /usr/share/wallpaper && cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/wallpaper /usr/share/wallpaper`<br><br>
+  `$ sudo mkdir -p /usr/share/wallpaper`<br>
+  `$ sudo cp -r ./wallpaper/* /usr/share/wallpaper && xdg-open /usr/share/wallpaper`<br><br>
 
 
 - add Gradience color profile<br>
-  `$ sudo cp -r /home/YOUR_USR_NAME/Downloads/Theme-Pack/gradience/Shell-Colors.json  /home/YOUR_USR_NAME/.var/app/com.github.GradienceTeam.Gradience/config/presets/user`<br><br>
+  `$ sudo cp -r ./gradience/*  /home/YOUR_USR_NAME/.var/app/com.github.GradienceTeam.Gradience/config/presets/user`<br><br>
 
 
 And this is the end... Good Luck Baby 🚀
