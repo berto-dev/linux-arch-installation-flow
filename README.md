@@ -109,6 +109,10 @@
     - Now update and reboot system:<br>
       `$ sudo pacman -Syu && reboot`<br>
 
+    - check/active bluetooth services:
+      `$ systemctl enable bluetooth.service`
+      `$ systemctl start bluetooth.service `
+
     - Use and prepare Packages <top><sub>(git/chrome/aur)</sub></top><br>
 
       - Make a folder for "Package" and enter into it<br>
@@ -171,13 +175,11 @@ AutomaticLogin=username
 
 <br>
 
-<b>Essentials extension:</b>
+<b>Essentials extensions:</b>
 
 before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
   `$ git clone https://aur.archlinux.org/gnome-browser-connector.git ./chrome-connector && cd ./chrome-connector`<br>
-  `$ makepkg -si && cd ..`
-
-
+  `$ makepkg -si && cd ..`<br>
 
   - [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
   - [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
