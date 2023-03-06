@@ -208,7 +208,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
 
 <br>
 
-#### Add ocean theme packs (it's my simple theme asset)
+#### Add a simple shell theme packs (it's my simple theme asset)
 
 remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."
 
