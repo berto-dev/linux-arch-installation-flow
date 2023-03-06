@@ -107,23 +107,28 @@
     Installation completed? Reboot<br>
     
     - Now update and reboot system:<br>
-      `$ sudo pacman -Syu`<br>
-      `$ sudo reboot`<br>
+      `$ sudo pacman -Syu && reboot`<br>
 
     - Use and prepare Packages <top><sub>(git/chrome/aur)</sub></top><br>
 
-      - Make a folder for "Package"<br>
-        `$ sudo mkdir -p ./Packages`<br>
+      - Make a folder for "Package" and enter into it<br>
+        `$ mkdir -p ./Packages && cd ./Packages`<br>
 
       - install Git for cloning pro packages<br>
         `$ sudo pacman -S git`<br>
 
       - Use Aur for first time, exemple:<br>
-        `$ sudo git clone https://aur.archlinux.org/google-chrome.git ./Packages/google-chrome`<br>
-        `$ cd packages/google-chrome`<br>
-        `$ makepkg -si`<br>
+        `$ sudo git clone https://aur.archlinux.org/google-chrome.git ./google-chrome`<br>
+        `$ sudo chmod 777 ./* && cd ./google-chrome`<br>
+        `$ makepkg -si && cd ..`<br>
         
     - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console
+      `$ sudo git clone https://aur.archlinux.org/snapd.git ./snap-store ./snap-store`<br>
+      `$ sudo chmod 777 ./* && cd ./snap-store`<br>
+      `$ makepkg -si && cd ..`<br>
+      add classic snap-store icon:<br>
+      `$ sudo ln -s /var/lib/snapd/snap /snap`<br>
+
 
 <br><hr><br>
 
