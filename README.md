@@ -190,7 +190,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/) (optional)
   - [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
   - [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
-  - [Desktop icons neo](https://github.com/DEM0NAssissan7/desktop-icons-neo)
+  - [Desktop icons neo](https://extensions.gnome.org/extension/4337/desktop-icons-neo/)
   - [Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)
   - [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
   - [Just perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
