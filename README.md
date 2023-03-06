@@ -180,6 +180,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
 
 
   - [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
+  - [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
   - [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)
   - [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) (optional)
   - [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
@@ -189,7 +190,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/) (optional)
   - [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
   - [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
-  - [gtk4 desktop icons](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/) or [Desktop icons neo](https://github.com/DEM0NAssissan7/desktop-icons-neo)
+  - [Desktop icons neo](https://github.com/DEM0NAssissan7/desktop-icons-neo)
   - [Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)
   - [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
   - [Just perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
