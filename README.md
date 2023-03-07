@@ -144,7 +144,7 @@
       `$ git clone https://aur.archlinux.org/snapd-glib.git ./snap-glib && cd ./snap-glib`<br>
       `$ makepkg -si && cd ..`<br>
       return in <i>./Packages</i> and add to gnome software:<br>
-      `$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snap-gnome`<br>
+      `$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snapd-gnome`<br>
       `$ makepkg -si && cd ..`<br>
       <i>on question "remove gnome conflict" ... ever yes.</i><br>
 
