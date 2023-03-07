@@ -112,26 +112,26 @@
       -  start autoupdater service:<br>
           `$ sudo systemctl start systemd-boot-update.service`<br>
           `$ bootctl update`<br>
-          In anycase, probably, system not view windows EFI if in a second drive, so...<br>
+      
+      In some case system not view windows EFI if in a second drive, so...<br>
 
       -  find windows partition (EFI of microsoft):<br>
           `$ sudo fdisk -l`<br>
 
-      -  mount it ( /!\ "1" or other number of win):<br>
+      -  mount it ("b1" or other of efi win):<br>
           `$ mount /dev/sdb1 /mnt`<br>
 
       -  copy efi into boots:<br>
           `$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br>
 
-      -  create a new /boot/loader/entries/windows.conf file:<br>
+          extra step only if not view the windows label:<br>
+          create a new /boot/loader/entries/windows.conf file:<br>
           `$ sudo nano /boot/loader/entries/windows.conf`<br>
-          and write into it:<br>
+          and write into it:
           ```
           title   Windows 10
           efi     /EFI/Microsoft/Boot/bootmgfw.efi
           ```
-          ctrl+x and save it<br>
-
        -  check ends:<br>
           `$ bootctl update`<br>
           `$ bootctl list`<br><br>
@@ -259,7 +259,7 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Gradience](https://flathub.org/apps/details/com.github.GradienceTeam.Gradience)
   - [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
 
-<--
+<!--
   via CLI:<br>
   - Grub Customizer:<br>
   `$ sudo pacman -S grub-customizer`<br>
