@@ -296,8 +296,9 @@ open Theme-Pack folder and...<br>
 
 
 - add Gradience color profile<br>
-  open the app and make a new file profile "Shell-Colors", after override it:<br>
-  `$ sudo cp -r ./gradience/*  /home/YOUR_USR_NAME/.var/app/com.github.GradienceTeam.Gradience/config/presets/user`<br><br>
+  open the app and make/save first standard colors, after it you have the forlder and can copy in it:<br>
+  `$ sudo cp -r ./gradience/*  /home/YOUR_USR_NAME/.var/app/com.github.GradienceTeam.Gradience/config/presets/user`<br>
+  now go in cofingurations (top right of topbar) and load "Shell-Colors"... all done.<br><br>
 
 
 And this is the end... Good Luck Baby 🚀
