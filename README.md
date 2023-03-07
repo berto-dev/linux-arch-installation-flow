@@ -179,8 +179,8 @@ AutomaticLogin=username
 - `$ sudo pacman -Rsn gnome-calendar`<br>
 - `$ sudo pacman -Rsn gnome-photos` <top><sub><i>(photo albums)</i></sub></top><br> 
 - `$ sudo pacman -Rsn totem` <top><sub><i>(video player)</i></sub></top><br> 
-- `$ sudo pacman -rsn htop`<br>
-- `$ sudo pacman -rsn vim`<br>
+- `$ sudo pacman -Rsn htop`<br>
+- `$ sudo pacman -Rsn vim`<br>
 - Etc...
 
 <br>
