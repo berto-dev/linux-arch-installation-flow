@@ -105,10 +105,39 @@
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS.jpg)
     
-    Installation completed? Reboot<br>
+    Installation completed? Reboot<br><br>
     
-    - Now update and reboot system:<br>
-      `$ sudo pacman -Syu && reboot`<br>
+    - install windows in boot loader
+
+      -  start autoupdater service:<br>
+          `$ sudo systemctl start systemd-boot-update.service`<br>
+          `$ bootctl update`<br>
+          In anycase, probably, system not view windows EFI if in a second drive, so...<br>
+
+      -  find windows partition (EFI of microsoft):<br>
+          `$ sudo fdisk -l`<br>
+
+      -  mount it ( /!\ "1" or other number of win):<br>
+          `$ mount /dev/sdb1 /mnt`<br>
+
+      -  copy efi into boots:<br>
+          `$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br>
+
+      -  create a new /boot/loader/entries/windows.conf file:<br>
+          `$ sudo nano /boot/loader/entries/windows.conf`<br>
+          and write into it:<br>
+          ```
+          title   Windows 10
+          efi     /EFI/Microsoft/Boot/bootmgfw.efi
+          ```
+          ctrl+x and save it<br>
+
+       -  check ends:<br>
+          `$ bootctl update`<br>
+          `$ bootctl list`<br><br>
+          
+      <i>you should probably have windows in the boot list.</i><br><br>
+
 
     - check/active system HDMI sound services for Nvidia:<br>
       `$ lspci -k | grep -A 2-E "(VGA|3D)"`<br>
@@ -120,9 +149,9 @@
       `$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
       now reboot...<br>
 
-    - check/active bluetooth services:
-      `$ systemctl enable bluetooth.service`
-      `$ systemctl start bluetooth.service `
+    - check/active bluetooth services:<br>
+      `$ systemctl enable bluetooth.service`<br>
+      `$ systemctl start bluetooth.service `<br>
 
     - Use and prepare Packages <top><sub>(git/chrome/aur)</sub></top><br>
 
@@ -150,6 +179,8 @@
       `$ makepkg -si && cd ..`<br>
       <i>on question "remove gnome conflict" ... ever yes.</i><br>
 
+    - Now update and reboot system:<br>
+      `$ sudo pacman -Syu && reboot`<br>
 
 <br><hr><br>
 
