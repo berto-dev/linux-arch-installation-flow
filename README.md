@@ -90,11 +90,13 @@
    Exemple:<br>
 
     - set your lang everywhere... And UTF8 character sets
-    - set disk to suggest layout and change ext4 in btrf, set it compressed (do not touch the boot partition)
+    - set disk to suggest layout and change ext4 standard ( exluded boot, you can switch it in btrf for compression )
     - set bootloader as systemd-boot (it's simplest of grub)
     - set your name host (the computer device name)
     - set a password and profile
-    - set profile to dekstop > gnome > nvidia property driver
+    - set profile to dekstop > gnome > nvidia property driver<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if over 3000 series => +Tensor drivers<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;if Cuda and minor of 3000 => nvidia standrad<br>
     - set audio to pipewire
     - set kernel to kinux or linux-zen (in case have rare hardware)
     - set net equal to iso configuration<br>
@@ -226,9 +228,11 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Gradience](https://flathub.org/apps/details/com.github.GradienceTeam.Gradience)
   - [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
 
+<--
   via CLI:<br>
   - Grub Customizer:<br>
   `$ sudo pacman -S grub-customizer`<br>
+-->
 
   preinstalled undebloatable ON/OFF list
   - Application Menu: OFF
@@ -266,6 +270,3 @@ open Theme-Pack folder and...<br>
 
 
 And this is the end... Good Luck Baby 🚀
-  
-  
-
