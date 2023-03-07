@@ -292,7 +292,6 @@ open Theme-Pack folder and...<br>
   `$ sudo cp -r ./icons/* /usr/share/icons`<br>
 
 - add the wallpaper<br>
-  `$ sudo mkdir -p /usr/share/wallpaper`<br>
   `$ sudo cp -r ./wallpaper/* /usr/share/backgrounds/gnome`<br><br>
 
 
