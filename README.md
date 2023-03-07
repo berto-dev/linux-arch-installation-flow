@@ -91,16 +91,15 @@
 
     - set your lang everywhere... And UTF8 character sets
     - set disk to suggest layout and change ext4 in btrf, set it compressed (do not touch the boot partition)
-    - set bootloader to grub
+    - set bootloader as systemd-boot (it's simplest of grub)
     - set your name host (the computer device name)
     - set a password and profile
-    - set profile to minimal
+    - set profile to dekstop > gnome > nvidia property driver
     - set audio to pipewire
-    - set kernel to zen
+    - set kernel to kinux or linux-zen (in case have rare hardware)
     - set net equal to iso configuration<br>
 
     an image of installer:<br>
-    <top><sub>Attention: Select a desktop env (gnome or kde) and not "minimal" if your not expert to install it via cli!!</sub></top>
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS.jpg)
     
@@ -108,6 +107,16 @@
     
     - Now update and reboot system:<br>
       `$ sudo pacman -Syu && reboot`<br>
+
+    - check/active system HDMI sound services for Nvidia:<br>
+      `$ lspci -k | grep -A 2-E "(VGA|3D)"`<br>
+      if nvida driver is OK:<br>
+      `$ modprobe nvidia dmsg`<br>
+      wait a 30/60 seconds or reboot for check sound in control settings panels<br>
+
+    - check/active Nvidia settings:<br>
+      `$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
+      now reboot...<br>
 
     - check/active bluetooth services:
       `$ systemctl enable bluetooth.service`
@@ -122,7 +131,8 @@
         `$ sudo pacman -S git`<br>
 
       - Use Aur for first time, exemple:<br>
-        `$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome` && cd ./google-chrome`<br>
+        `$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome`<br>
+        `$ cd ./google-chrome`<br>
         `$ makepkg -si && cd ..`<br>
         
     - Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console<br>
