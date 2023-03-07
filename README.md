@@ -222,8 +222,9 @@ before all: if you use chrome need to install [gnome browser connector](https://
   - [Filemanager actions](https://archlinux.org/packages/community/x86_64/filemanager-actions/)<br>
 
   via flathub:<br>
-  - [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
+  - [Easy Effects](https://flathub.org/apps/details/com.github.wwmm.easyeffects)
   - [Gradience](https://flathub.org/apps/details/com.github.GradienceTeam.Gradience)
+  - [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
 
   via CLI:<br>
   - Grub Customizer:<br>
