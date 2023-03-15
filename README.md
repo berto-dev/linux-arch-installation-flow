@@ -310,4 +310,19 @@ open Theme-Pack folder and...<br>
   now go in cofingurations (top right of topbar) and load "Shell-Colors"... all done.<br><br>
 
 
+
+<br><hr><br>
+
+### CLEANING SYSTEM
+
+- remove all orphan pack and dependencies:<br>
+  `$ sudo pacman -Rns $(pacman -Qtdq)`<br>
+
+- emty chache:<br>
+  `$ sudo du -sh ~/.cache/ && rm -rf ~/.cache/*`<br>
+
+- duplicated and corrupted links via rmlint:<br>
+  `$ sudo pacman -S rmlint && rmlint -v`<br>
+  `$ rmlint -g -c sh:link && bash rmlint.sh` and press "y"<br>
+
 And this is the end... Good Luck Baby 🚀
