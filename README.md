@@ -107,6 +107,15 @@
     
     Installation completed? Reboot<br><br>
     
+    - add asterisks to consolle, open it and...
+        `$ cd /etc/`<br>      
+        `$ sudo -s`<br>
+        `$ cp sudoers sudoers.bak`<br>
+        `$ EDITOR=nano visudo`<br>
+        now find or add the string:<br>
+        `Defaults env_reset,pwfeedback`<br>
+        Ctrl + x and S for save<br>
+
     - install windows in boot loader
 
       -  start autoupdater service:<br>
