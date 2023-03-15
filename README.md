@@ -227,6 +227,16 @@ AutomaticLogin=username
 
 <br>
 
+<b>Expand Files (nautilus):</b><br>
+Open console and:<br>
+- `$ git clone https://aur.archlinux.org/nautilus-admin.git ./nautilus-admin`<br>
+- `$ cd nautilus-admin && makepkg && nautilus -q `<br>
+   // note:you can try "sudo pacman -Sy nautilus-admin && nautilus -q"<br><br>
+
+or other extensions on [nautilus-extension in github](https://github.com/topics/nautilus-extension)<br>
+
+<br>
+
 <b>Essentials extensions:</b>
 
 before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
