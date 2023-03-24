@@ -328,8 +328,13 @@ open Theme-Pack folder and...<br>
 - remove all orphan pack and dependencies:<br>
   `$ sudo pacman -Rns $(pacman -Qtdq)`<br>
 
-- emty chache:<br>
+- empty chache:<br>
   `$ sudo du -sh ~/.cache/ && rm -rf ~/.cache/*`<br>
+
+- clean flatpak<br>
+  `$ sudo rm -rfv /var/tmp/flatpak-cache-*`<br>
+  `$ flatpak uninstall --unused`<br>
+
 
 - duplicated and corrupted links via rmlint:<br>
   `$ sudo pacman -S rmlint && rmlint -v`<br>
