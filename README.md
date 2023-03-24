@@ -331,7 +331,7 @@ open Theme-Pack folder and...<br>
 - empty chache:<br>
   `$ sudo du -sh ~/.cache/ && rm -rf ~/.cache/*`<br>
 
-- clean flatpak<br>
+- clean flatpak [*](https://www.debugpoint.com/clean-up-flatpak/)<br>
   `$ sudo rm -rfv /var/tmp/flatpak-cache-*`<br>
   `$ flatpak uninstall --unused`<br>
 
