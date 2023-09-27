@@ -167,7 +167,7 @@
       - Make a folder for "Package" and enter into it<br>
         `$ mkdir -p ./Packages && cd ./Packages`<br>
 
-        abaut `Packages` and packs: <i>make attention of folder into the package of AUR, if you want to install all into ~/home/package directory like windows system you need to find every packs locations into installer script!</i>. Anyway, you can try to modding folder of flatpack/flathub install <sup>[[info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - (flatpak-installation)[https://man7.org/linux/man-pages/man5/flatpak-installation.5.html] - [user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)</sup>:
+        abaut `Packages` and packs: <i>make attention of folder into the package of AUR, if you want to install all into ~/home/package directory like windows system you need to find every packs locations into installer script!</i>. Anyway, you can try to modding folder of flatpack/flathub install <sup>[[info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</sup>:
           -  open nautilus and press ctrl+L<br>
           - copy `/etc/flatpak/installations.d` on address bar<br>
           - open that folder in terminal ad with set CLI: `sudo gedit extra.conf`
