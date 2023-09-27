@@ -187,6 +187,25 @@
       `$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snapd-gnome`<br>
       `$ makepkg -si && cd ..`<br>
       <i>on question "remove gnome conflict" ... ever yes.</i><br>
+      <br>
+      you can try to mode folder of snap install:
+        -  open nautilus and press ctrl+L<br>
+        - copy `/etc/flatpak/installations.d` on address bar<br>
+        - open that folder in terminal ad with set CLI: `sudo gedit extra.conf`
+        - copy this for set a new installation folder:
+          ```txt
+          [Installation "packs"]
+          Path=/home/berto/Packages
+          DisplayName=Extra Installation
+          StorageType=harddisk
+          ```
+          you can use it in this way<br>
+          ```
+          1. See man flatpak-installation for the format.
+          2. Add a remote with: `flatpak --installation=packs remote-add flathub https://flathub.org/repo/flathub.flatpakrepo`
+          3. Install to it with: `flatpak --installation=packs install flathub org.inkscape.Inkscape` (inkscape is an exemple)
+          4. Run from it with: flatpak run org.inkscape.Inkscape
+          ```
 
     - Now update and reboot system:<br>
       `$ sudo pacman -Syu && reboot`<br>
