@@ -14,7 +14,7 @@
   [archlinux official downloads](https://archlinux.org/download/) via:<br>
 	- "Magnet link" <sup>Raccomended</sup><br>
 			if you don't have a torrent client you can use [Fragments](https://flathub.org/apps/de.haeckerfelix.Fragments) <i>(better, but only in linux - how to install is below)</i> or [Deluge](https://deluge-torrent.org/) <i>(windows/mac/linux)</i>.<br>
-	- "Browser" <sup>slow</sup>
+	- "Browser" <sup>slow</sup><br>
     		- latest ISO from [EU ITALY Mirror](https://archmirror.it/repos/iso/latest/)<br>
     		- latest ISO from [EU UK Mirror](https://www.mirrorservice.org/sites/ftp.archlinux.org/iso/latest/)<br>
     		- latest ISO from [USA Mirror](http://mirror.fossable.org/archlinux/iso/latest/) <br>
