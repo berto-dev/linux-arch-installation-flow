@@ -289,7 +289,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/) (optional)
 	- [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
 	- [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
-	- [Desktop icons neo](https://extensions.gnome.org/extension/4337/desktop-icons-neo/)
+	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
 	- [Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)
 	- [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
 	- [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
