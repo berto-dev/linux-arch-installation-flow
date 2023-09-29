@@ -290,7 +290,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
 	- [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
 	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
-	- <s>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</s> NO GNOME 44.X
+	- <s>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</s> 2023: gnome 44.X uncompatible
 	- [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
 	- [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 	- [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
@@ -303,7 +303,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
 	- [Weather in the clock](https://extensions.gnome.org/extension/5470/weather-oclock/)
 	- [Wi-Fi Qr](https://extensions.gnome.org/extension/5416/wifi-qrcode/)
-	- [Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)<br>
+	- <s>[Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)</s> 2023: currently useless<br>
 
 
   preinstalled undebloatable ON/OFF list
@@ -367,7 +367,7 @@ or you can use secure and manually commands:
 
 - duplicated and corrupted links via rmlint:<br>
   `$ sudo pacman -S rmlint && rmlint -v`<br>
-  `$ rmlint -g -c sh:link && bash rmlint.sh` and press "y"<br>
+  `$ rmlint -g -c sh:link && bash rmlint.sh` and press "y"<br><br><br>
 
 
 And this is the end... Good Luck Baby 🚀
