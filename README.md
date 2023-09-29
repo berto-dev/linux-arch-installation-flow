@@ -269,7 +269,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ makepkg -si && cd ..`<br>
 
 	- [google chrome](https://wiki.archlinux.org/title/chromium)<br>
-	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome` && cd ./google-chrome`<br>
+	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
 	`$ makepkg -si && cd ..`<br>
 
 
