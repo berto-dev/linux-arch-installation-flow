@@ -1,8 +1,5 @@
-<b> It's under costruction </b>
-
----
-
 # linux arch installation flow
+<b> Tested on september 2023 </b>
 
 ### A good reference:
 
