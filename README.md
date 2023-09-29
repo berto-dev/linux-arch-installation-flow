@@ -18,16 +18,16 @@
 	- "Magnet link" <sup>Raccomended</sup><br>
 			if you don't have a torrent client you can use [Fragments](https://flathub.org/apps/de.haeckerfelix.Fragments) <i>(better, but only in linux - how to install is below)</i> or [Deluge](https://deluge-torrent.org/) <i>(windows/mac/linux)</i>.<br>
 	- "Browser" <sup>slow</sup>
-    		- latest ISO from [EU ITALY Mirror](https://archmirror.it/repos/iso/latest/)
-    		- latest ISO from [EU UK Mirror](https://www.mirrorservice.org/sites/ftp.archlinux.org/iso/latest/)
-    		- latest ISO from [USA Mirror](http://mirror.fossable.org/archlinux/iso/latest/) 
-    		- latest ISO from [INDIA Mirror](https://mirror.sahil.world/archlinux/iso/latest/)
-    		- latest ISO from [JAPAN Mirror](https://repo.jing.rocks/archlinux/iso/latest/)
-    		- latest ISO from [RUSSIA Mirror](https://mirror.yandex.ru/archlinux/iso/latest/)
-    		- latest ISO from [AFRICA Mirror](https://mirrors.urbanwave.co.za/archlinux/iso/latest/)
-    		- latest ISO from [HK Mirror](https://hkg.mirror.rackspace.com/archlinux/iso/latest/)
-    		- latest ISO from [AUSTRALIA Mirror](https://archlinux.mirror.digitalpacific.com.au/iso/latest/)
-    		- latest ISO from [ARGENTINA Mirror](https://mirrors.eze.sysarmy.com/archlinux/iso/latest/)
+    		- latest ISO from [EU ITALY Mirror](https://archmirror.it/repos/iso/latest/)<br>
+    		- latest ISO from [EU UK Mirror](https://www.mirrorservice.org/sites/ftp.archlinux.org/iso/latest/)<br>
+    		- latest ISO from [USA Mirror](http://mirror.fossable.org/archlinux/iso/latest/) <br>
+    		- latest ISO from [INDIA Mirror](https://mirror.sahil.world/archlinux/iso/latest/)<br>
+    		- latest ISO from [JAPAN Mirror](https://repo.jing.rocks/archlinux/iso/latest/)<br>
+    		- latest ISO from [RUSSIA Mirror](https://mirror.yandex.ru/archlinux/iso/latest/)<br>
+    		- latest ISO from [AFRICA Mirror](https://mirrors.urbanwave.co.za/archlinux/iso/latest/)<br>
+    		- latest ISO from [HK Mirror](https://hkg.mirror.rackspace.com/archlinux/iso/latest/)<br>
+    		- latest ISO from [AUSTRALIA Mirror](https://archlinux.mirror.digitalpacific.com.au/iso/latest/)<br>
+    		- latest ISO from [ARGENTINA Mirror](https://mirrors.eze.sysarmy.com/archlinux/iso/latest/)<br>
 
 - Make an iso bootable usb<br>
 	- if in windows: download [rufus official downloads](https://rufus.ie/it/) and start to create an <i>iso bootable</i> usb drive with arch iso image
@@ -97,9 +97,11 @@
     - set kernel to `linux` or `linux-zen` (in case have rare hardware)
     - set net equal to iso configuration<br>
 
-    an image of installer:<br>
+    an image of installer:<br> 
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
-    ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS.jpg)
+    ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-btrf.jpg)<br>
+another way is partitioned in ext4 mix single btrf (not raccomended way)<br>
+    ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-ext4.jpg)<br>
     
     Installation completed? Reboot<br><br>
     
