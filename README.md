@@ -248,19 +248,19 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 	- pacman -S filemanager-actions (currently not available)<br>
 
-	- [bauh](https://github.com/vinifmor/bauh)<br>
+	- [Bauh](https://github.com/vinifmor/bauh)<br>
 	`$ git clone  https://aur.archlinux.org/bauh.git ./bauh && cd ./bauh`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Easy Effects](https://github.com/wwmm/easyeffects)
+	- [Easy Effects](https://github.com/wwmm/easyeffects)<br>
 	`$ git clone https://aur.archlinux.org/easyeffects-git.git ./easyeffects && cd ./easyeffects`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Gradience](https://github.com/GradienceTeam/Gradience)
+	- [Gradience](https://github.com/GradienceTeam/Gradience)<br>
 	`$ git clone https://aur.archlinux.org/gradience.git ./gradience && cd ./gradience`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)
+	- [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)<br>
 	`$ git clone https://aur.archlinux.org/fragments-git.git ./fragments && cd ./fragments`<br>
 	`$ makepkg -si && cd ..`<br>
 
