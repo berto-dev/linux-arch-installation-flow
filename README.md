@@ -11,39 +11,54 @@
 3 - [Stack Exchange Network](https://askubuntu.com/questions/726972/dual-boot-windows-10-and-linux-ubuntu-on-separate-hard-drives)<br>
 
 ---
-<br> <b>[STEP:1/3]</b>
+<br> <b>[STEP:1/3] ISO AND BOOTABLE</b>
 
-- download arch iso linux:<br>
-  [archlinux official downloads](https://archlinux.org/download/) > select "Magnet link"<br>
- 
-- download rufus:<br>
-  [rufus official downloads](https://rufus.ie/it/) and start to create an <i>iso bootable</i> usb drive with arch iso image
-  - raccommended: check your bios is an uefi:<br>
-    ...in bios you can find it in the options<br>
-    ...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode), check if "secure boot" is off or set it via bitlocker<br>
-  - [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): MBR, FAT32, 8192byte, and load iso of arch.<br>
+- Download arch iso linux:<br>
+  [archlinux official downloads](https://archlinux.org/download/) via:<br>
+	- "Magnet link" <sup>Raccomended</sup><br>
+			if you don't have a torrent client you can use [Fragments](https://flathub.org/apps/de.haeckerfelix.Fragments) <i>(better, but only in linux - how to install is below)</i> or [Deluge](https://deluge-torrent.org/) <i>(windows/mac/linux)</i>.<br>
+	- "Browser" <sup>slow</sup>
+    	- latest ISO from [EU ITALY Mirror](https://archmirror.it/repos/iso/latest/)
+    	- latest ISO from [EU UK Mirror](https://www.mirrorservice.org/sites/ftp.archlinux.org/iso/latest/)
+    	- latest ISO from [USA Mirror](http://mirror.fossable.org/archlinux/iso/latest/) 
+    	- latest ISO from [INDIA Mirror](https://mirror.sahil.world/archlinux/iso/latest/)
+    	- latest ISO from [JAPAN Mirror](https://repo.jing.rocks/archlinux/iso/latest/)
+    	- latest ISO from [RUSSIA Mirror](https://mirror.yandex.ru/archlinux/iso/latest/)
+    	- latest ISO from [AFRICA Mirror](https://mirrors.urbanwave.co.za/archlinux/iso/latest/)
+    	- latest ISO from [HK Mirror](https://hkg.mirror.rackspace.com/archlinux/iso/latest/)
+    	- latest ISO from [AUSTRALIA Mirror](https://archlinux.mirror.digitalpacific.com.au/iso/latest/)
+    	- latest ISO from [ARGENTINA Mirror](https://mirrors.eze.sysarmy.com/archlinux/iso/latest/)
 
-- no second drive? need a partition:
+- Make an iso bootable usb<br>
+	- if in windows: download [rufus official downloads](https://rufus.ie/it/) and start to create an <i>iso bootable</i> usb drive with arch iso image
+    	- raccommended: check your bios is an uefi:<br>
+      	...in bios you can find it in the options<br>
+      	...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode), check if "secure boot" is off or set it via bitlocker<br>
+    	- [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): MBR, FAT32, 8192byte, and load iso of arch.<br>
+
+	- if in linux:
+		- use [Impression](https://gitlab.com/adhami3310/Impression)
+
+- No second drive? need a partition:<br><sup><sub>warning, if you not an expert see on youtube before this action! Shrink, formatting and move partition can cause an irreversible lost of data</sub><sup>
   - via linux terminal [(this link)](https://phoenixnap.com/kb/linux-create-partition)
   - in windows:<br>
-    - win+r and write "diskmgmt.msc"
+    - win+r and write `diskmgmt.msc`
     - right click on NFTS window partition and shrink it with min 6GB for linux<br>
-    <small><i>warning, if you not an expert see on youtube before this action!</i></small><br>
 
-- restart and boot way:<br>
-  a) go to bios and load arch from usb (or set it first boot)<br>
-  b) via windows:<br>
-     1) open win menu and find "startup"<br>
-     2) open "advanced sturtup recovery" (ITA:modifica le opzioni di avvio avanzato)<br>
-     3) click on "advanced sturtup" > "use a device" > select your bootable arch usb<br>
+- Restart and boot way:<br>
+	a) go to bios and load arch from usb (or set it first boot)<br>
+ 	b) via windows:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;1) open win menu and find "startup"<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;2) open "advanced sturtup recovery" (ITA:modifica le opzioni di avvio avanzato)<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3) click on "advanced sturtup" > "use a device" > select your bootable arch usb<br>
 
-<br> <b>[STEP:2/3]</b>
+<br> <b>[STEP:2/3] PREPARING TO INSTALLATION</b>
 
 - Set Keyboard Layout:<br>
 
     `$ loadkeys it` (or other lang)<br>
 
-- Set time date:<br>
+- Set time zone:<br>
 
     `$ timedatectl set-ntp true`<br>
 
@@ -63,42 +78,27 @@
           4) Finally (or direct if you know params), to connect to a network:<br>
           &nbsp;&nbsp;&nbsp;&nbsp;`[iwd]# station DEVICE connect SSID`<br>
 
-<!--
-- Install on disk (basic/obsoleted):
+<br> <b>[STEP:3/3] INSTALL LINUX OS</b>
 
-  `$ cfdisk`<br>
-
-    ...Select gpt (it's for over 2t disks)<br>
-    ...Get 2G of SSD, set type: Linux Swap<br>
-    ...Get other of SSD, set type: Linux system<br>
-
-  Enter on [ write ]
-
-  If you read "syncing disks" you're ok, now set a boot:<br>
-  `$ parted` > `$ print` > `$ add "N(number of partition)" "boot" "on"`
-
-  NOTE: next step have better solution for make the partitions
--->
-
-<br> <b>[STEP:3/3]</b>
-
-- from 2022 you can use a graphical installer (it's good):<br>
+- from 2022 you can use a graphical installer (it's good! :D):<br>
   `$ archinstall`<br>
 
-   follow the instruction into installer and save your json profile ;)<br>
-   <top><sub>SUGGEST: <i>Always select more than one mirror to avoid potential crashes or update failures</i></sub></top><br>
-   Exemple:<br>
+   follow the instruction into installer ( and save your json profile if you want ;) )<br>
+   <top><sub>SUGGEST: <i>Always select more than one mirror to avoid potential crashes or update failures</i></sub></top><br><br>
+   Installation exemple:<br>
 
-    - set your lang everywhere... And UTF8 character sets
-    - set disk to suggest layout and change ext4 standard ( exluded boot, you can switch it in btrf for compression )
-    - set bootloader as systemd-boot (it's simplest of grub)
+    - set your lang everywhere... And `UTF8` character sets
+    - set disk to suggest layout and change `btrf` standard and:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;set `compressed` on true<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;set `swap` on true<br>
+    - set bootloader as `systemd-boot` (it's simplest of grub)
     - set your name host (the computer device name)
-    - set a password and profile
+    - set a password and one profile, set it as an admin
     - set profile to dekstop > gnome > nvidia property driver<br>
     &nbsp;&nbsp;&nbsp;&nbsp;if over 3000 series => +Tensor drivers<br> 
     &nbsp;&nbsp;&nbsp;&nbsp;if Cuda and minor of 3000 => nvidia standrad<br>
-    - set audio to pipewire
-    - set kernel to kinux or linux-zen (in case have rare hardware)
+    - set audio to `pipewire`
+    - set kernel to `linux` or `linux-zen` (in case have rare hardware)
     - set net equal to iso configuration<br>
 
     an image of installer:<br>
@@ -107,83 +107,85 @@
     
     Installation completed? Reboot<br><br>
     
-    - add asterisks to consolle, open it and...
-        `$ cd /etc/`<br>      
-        `$ sudo -s`<br>
-        `$ cp sudoers sudoers.bak`<br>
-        `$ EDITOR=nano visudo`<br>
-        now find or add the string:<br>
-        `Defaults env_reset,pwfeedback`<br>
-        Ctrl + x and S for save<br>
+- Add asterisks to consolle password, open it and...<br>
+	`$ cd /etc/`<br>
+	`$ sudo -s`<br>
+	`$ cp sudoers sudoers.bak`<br>
+	`$ EDITOR=nano visudo`<br>
+	now find or add the string:<br>
+	`Defaults env_reset,pwfeedback`<br>
+	Ctrl + x and S for save<br>
 
-    - install windows in boot loader
+- Install windows in boot loader
 
-      -  start autoupdater service:<br>
-          `$ sudo systemctl start systemd-boot-update.service`<br>
-          `$ bootctl update`<br>
+	-  start autoupdater service:<br>
+		`$ sudo systemctl start systemd-boot-update.service`<br>
+		`$ bootctl update`<br>
       
-      In some case system not view windows EFI if in a second drive, so...<br>
+	In some case system not view windows EFI if in a second drive, so...<br>
 
-      -  find windows partition (EFI of microsoft):<br>
-          `$ sudo fdisk -l`<br>
+	-  find windows partition (EFI of microsoft):<br>
+		`$ sudo fdisk -l`<br>
 
-      -  mount it ("b1" or other of efi win):<br>
-          `$ mount /dev/sdb1 /mnt`<br>
+	-  mount it ("b1" or other of efi win):<br>
+		`$ mount /dev/sdb1 /mnt`<br>
 
-      -  copy efi into boots:<br>
-          `$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br>
+	-  copy efi into boots:<br>
+		`$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br>
 
-          extra step only if not view the windows label:<br>
-          create a new /boot/loader/entries/windows.conf file:<br>
-          `$ sudo nano /boot/loader/entries/windows.conf`<br>
-          and write into it:
-          ```
-          title   Windows 10
-          efi     /EFI/Microsoft/Boot/bootmgfw.efi
-          ```
-       -  check ends:<br>
-          `$ bootctl update`<br>
-          `$ bootctl list`<br><br>
+		extra step only if not view the windows label:<br>
+		create a new /boot/loader/entries/windows.conf file:<br>
+		`$ sudo nano /boot/loader/entries/windows.conf`<br>
+		and write into it:
+		```
+		title   Windows 10
+		efi     /EFI/Microsoft/Boot/bootmgfw.efi
+		```
+	-  check ends:<br>
+		`$ bootctl update`<br>
+		`$ bootctl list`<br><br>
           
-      <i>you should probably have windows in the boot list.</i><br><br>
+		<i>you should probably have windows in the boot list.</i><br><br>
 
+- check/active system HDMI sound services for Nvidia:<br>
+	`$ lspci -k | grep -A 2 -E "(VGA|3D)"`<br>
+	if nvida driver is OK:<br>
+	`$ modprobe nvidia dmsg`<br>
+	wait a 30/60 seconds or reboot for check sound in control settings panels<br>
 
-    - check/active system HDMI sound services for Nvidia:<br>
-      `$ lspci -k | grep -A 2-E "(VGA|3D)"`<br>
-      if nvida driver is OK:<br>
-      `$ modprobe nvidia dmsg`<br>
-      wait a 30/60 seconds or reboot for check sound in control settings panels<br>
+- check/active Nvidia settings:<br>
+	`$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
+	now reboot...<br>
 
-    - check/active Nvidia settings:<br>
-      `$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
-      now reboot...<br>
+- Launch audio services...
+	`systemctl --user --now enable pipewire`<br>
 
-    - check/active bluetooth services:<br>
-      `$ systemctl enable bluetooth.service`<br>
-      `$ systemctl start bluetooth.service `<br>
+- Launch bluetooth services:<br>
+	`$ systemctl enable bluetooth.service`<br>
+	`$ systemctl start bluetooth.service `<br>
 
-    - Use and prepare Packages <top><sub>(git/chrome/aur)</sub></top><br>
+- Use and prepare Packages <top><sub>(git/aur/other)</sub></top><br>
 
-      - Make a folder for "Package" and enter into it<br>
-        `$ mkdir -p ./Packages && cd ./Packages`<br>
+	- Make a folder for your "Package" (like Programs in window) in Home and enter into it<br>
+		`$ mkdir -p ./Packages && cd ./Packages`<br>
 
-        abaut `Packages` and packs: <i>make attention of folder into the package of AUR, if you want to install all into ~/home/package directory like windows system you need to find every packs locations into installer script!</i>. Anyway, you can try to modding folder of flatpack/flathub install <sup>[[info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</sup>:
-          -  open nautilus and press ctrl+L<br>
-          - copy `/etc/flatpak/installations.d` on address bar<br>
-          - open that folder in terminal ad with set CLI: `sudo gedit extra.conf`
-          - copy this for set a new installation folder:
-            ```txt
-            [Installation "packs"]
-            Path=/home/YOURUSR/Packages
-            DisplayName=Extra Installation
-            StorageType=harddisk
-            ```
-            you can use it in this way<br>
-            ```
-            1. Add a remote with: `flatpak --installation=packs remote-add flathub https://flathub.org/repo/flathub.flatpakrepo`
-            2. Install to it with: `flatpak --installation=packs install flathub org.inkscape.Inkscape` (inkscape is an exemple)
-            3. Run from it with: flatpak run org.inkscape.Inkscape
-            ```       
+		abaut `Packages` and packs: <i>make attention: of folder into the package of AUR, if you want to install all into ~/home/package directory like windows system you need to find every packs locations into installer script!</i>. Anyway, you can try to modding folder of flatpack/flathub install <sup>[[info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</sup>:
+			- open nautilus and press `ctrl+L`<br>
+			- copy `/etc/flatpak/installations.d` on address bar<br>
+			- open that folder in terminal ad with set CLI: `sudo nano extra.conf`
+			- copy this for set a new installation folder:
+			```txt
+			[Installation "packs"]
+			Path=/home/YOURUSRNAME/Packages
+			DisplayName=Packages Installation
+			StorageType=harddisk
+			```
+			you can use it in this way for flatpack<br>
+			```
+			1. Add a remote with: `flatpak --installation=packs remote-add flathub https://flathub.org/repo/flathub.flatpakrepo`
+			2. Install to it with: `flatpak --installation=packs install flathub org.inkscape.Inkscape` (inkscape is an exemple)
+			3. Run from it with: flatpak run org.inkscape.Inkscape
+			```
 
       - install Git for cloning pro packages<br>
         `$ sudo pacman -S git`<br>
