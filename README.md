@@ -22,7 +22,7 @@
     		- latest ISO from [JAPAN Mirror](https://repo.jing.rocks/archlinux/iso/latest/)<br>
     		- latest ISO from [RUSSIA Mirror](https://mirror.yandex.ru/archlinux/iso/latest/)<br>
     		- latest ISO from [AFRICA Mirror](https://mirrors.urbanwave.co.za/archlinux/iso/latest/)<br>
-    		- latest ISO from [HK Mirror](https://hkg.mirror.rackspace.com/archlinux/iso/latest/)<br>
+    		- latest ISO from [CHINA Mirror](https://hkg.mirror.rackspace.com/archlinux/iso/latest/)<br>
     		- latest ISO from [AUSTRALIA Mirror](https://archlinux.mirror.digitalpacific.com.au/iso/latest/)<br>
     		- latest ISO from [ARGENTINA Mirror](https://mirrors.eze.sysarmy.com/archlinux/iso/latest/)<br>
 
