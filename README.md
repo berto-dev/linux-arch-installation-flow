@@ -290,7 +290,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
 	- [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
 	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
-	- [Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)
+	- <s>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</s> NO GNOME 44.X
 	- [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
 	- [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 	- [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
