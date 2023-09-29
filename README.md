@@ -279,14 +279,15 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ makepkg -si && cd ..`<br>
 
 	- [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
-	- [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)
-	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)
-	- [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) (optional)
+	- [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)<br>
+	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)<br>
+	 &nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S pacman-contrib`, after change "gnome-consolle" in "kgx" into the options</sub></sup>
+	- [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) 
 	- [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
 	- [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
 	- [Blur my shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 	- [Burn My Windows](https://extensions.gnome.org/extension/4679/burn-my-windows/)
-	- [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/) (optional)
+	- [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/)
 	- [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
 	- [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
 	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
