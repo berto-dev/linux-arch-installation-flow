@@ -97,7 +97,7 @@
     an image of installer:<br> 
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-btrf.jpg)<br>
-another way is partitioned in ext4 mix single btrf (not raccomended way)<br>
+another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-ext4.jpg)<br>
     
     Installation completed? Reboot<br><br>
