@@ -297,7 +297,8 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
 	- [Removable drive in menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
 	- [Settings center](https://extensions.gnome.org/extension/2899/settingscenter/)
-	- [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)
+	- [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S gnome-screenshot`</sub></sup><br>
 	- [Top bar organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
 	- [Trayicons reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
 	- [User themes](https://extensions.gnome.org/extension/19/user-themes/)
@@ -323,19 +324,12 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.zip) and unzip it.
 
-2) copy file of theme...<br>
-remember: "gnome have the hidden folder for override (unlock hide file and search, for exemple, .icons in /home) but not all it's getted good. In that case you can follow the below command lines for copy direct into the system user folder."<br>
+2) open Theme-Pack folder and...<br>
+- open nautilus and unlock hidden files
+- copy files of the theme into home directory
+- set in the customization (gnome tweaks>apparence) like the screenshot<br>
 
-open Theme-Pack folder and...<br>
-- add shell theme (Based on Fluent-Round-White/Dark)<br>
-  `$ sudo cp -r ./themes/* /usr/share/themes`<br>
-
-- add icons (Based on Depeen) and cursor (Based on Qogir)<br>
-  `$ sudo cp -r ./icons/* /usr/share/icons`<br>
-
-- add the wallpaper<br>
-  `$ sudo cp -r ./wallpaper/* /usr/share/backgrounds/gnome`<br><br>
-
+![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/theme-pack.jpg)<br>
 
 - add Gradience color profile<br>
   open the app and make/save first standard colors, after it you have the forlder and can copy in it:<br>
