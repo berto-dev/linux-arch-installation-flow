@@ -153,7 +153,7 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 		`$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
 		now reboot...<br>
 
-- Launch audio services...
+- Launch audio services...<br>
 	`$ systemctl --user --now enable pipewire`<br>
   	`$ systemctl --user list-unit-files | grep -E 'pulse|wire' | awk '{ print $1,"-", $2 }'` (check enables services, is it true?)<br>
 
@@ -268,10 +268,16 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ git clone https://aur.archlinux.org/impression.git ./impression && cd ./impression`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [google chrome](https://wiki.archlinux.org/title/chromium)<br>
+	- [google chrome](https://aur.archlinux.org/packages/google-chrome) (it's google standard, not [chromium](https://wiki.archlinux.org/title/chromium))<br>
 	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
 	`$ makepkg -si && cd ..`<br>
 
+
+	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) (probably you are dev, so...)<br>
+	`$ git clone https://aur.archlinux.org/visual-studio-code-bin.git ./vscode && cd ./vscode`<br>
+	`$ makepkg -si && cd ..`<br>
+	fixing: if, on double click, vscode open the dir on desktop:<br>
+	`$ xdg-mime default org.gnome.Nautilus.desktop inode/directory`
 
 - Gnome Extensions:<br>
 	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
