@@ -162,7 +162,7 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	`$ systemctl start bluetooth.service `<br>
 
 - Install/Fix Unicode Charactes:<br>
-	`$ sudo pacman -S noto-fonts-emoji`<br>
+	`$ sudo pacman -S noto-fonts-emoji` or/and `$ sudo pacman -S ttf-font-awesome`<br>
 	`$ sudo fc-cache -f -v`<br>
 
 - Use and prepare Packages <top><sub>(git/aur/other)</sub></top><br><blockquote>💩 make attention: Linux doesn't have a bond for make single folder for programs and more of thems are installed following the [FHS](https://it.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) standard insted have all files in their a property folder. Yep, it's a problem for understand what is installed and all relative dependecies but other solutions, currently, doesn't exist (or better, i don't find it). I suggest install all your packs via AUR (not gnome-software) and track it via Bauh. Anyway, you can try to modding folder (like below) of flatpack/flathub install [info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</blockquote>
