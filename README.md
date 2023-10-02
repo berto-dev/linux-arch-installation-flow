@@ -297,12 +297,16 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
 	`$ makepkg -si && cd ..`<br>
 
-
 	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) (probably you are dev, so...)<br>
 	`$ git clone https://aur.archlinux.org/visual-studio-code-bin.git ./vscode && cd ./vscode`<br>
 	`$ makepkg -si && cd ..`<br>
 	fixing: if, on double click, vscode open the dir on desktop:<br>
 	`$ xdg-mime default org.gnome.Nautilus.desktop inode/directory`
+
+	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git) (are you a js dev like me? so, install nvm, npm, nodejs...)<br>
+	`$ git clone https://aur.archlinux.org/nvm-desktop.git ./nvm-desktop && cd ./nvm-desktop`<br>
+	`$ makepkg -si && cd ..`<br>
+
 
 - Gnome Extensions:<br>
 	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
