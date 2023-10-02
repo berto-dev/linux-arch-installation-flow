@@ -259,6 +259,11 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 	- pacman -S filemanager-actions (currently not available)<br>
 
+	- [snapper gui](https://github.com/ricardomv/snapper-gui) (graphical backup system helper)<br>
+	- `$ git clone https://aur.archlinux.org/snapper-gui-git.git ./snapper-gui && cd ./snapper-gui`<br>
+	- `$ makepkg -si && cd .. `<br>
+
+
 	- [Bauh](https://github.com/vinifmor/bauh)<br>
 	`$ git clone  https://aur.archlinux.org/bauh.git ./bauh && cd ./bauh`<br>
 	`$ makepkg -si && cd ..`<br>
