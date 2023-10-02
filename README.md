@@ -316,7 +316,19 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
 	- [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)<br>
 	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)<br>
-	 &nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S pacman-contrib`, after change "gnome-consolle" in "kgx" into the options</sub></sup>
+	 	- note: you need to install `sudo pacnman -S pacman-contrib`, into the options remove classic command with this:<br>
+		```bash
+		__=$(printf '%*s' "$(tput cols)" '' | tr ' ' -)
+		kgx -- /bin/sh -c "sudo pacman -Syu &&
+		echo -e \"\n$__\n\" &&
+		sudo snap refresh &&
+		echo -e \"\n$__\n\" &&
+		flatpak update &&
+		echo -e \"\n$__\n\" &&
+		(pacman -Qdtq | grep -q .) && sudo pacman -Rns \$(pacman -Qdtq) || echo \"Afret pack: Nothig to clean...\" &&
+		echo -e \"\n$__\n\" &&
+		echo Done - Press enter to exit; read -n1 -r; exit"
+		```
 	- [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) 
 	- [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
 	- [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
