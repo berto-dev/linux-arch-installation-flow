@@ -232,7 +232,14 @@ AutomaticLogin=username
 - `$ sudo pacman -Rsn totem` <top><sub><i>(video player)</i></sub></top><br> 
 - `$ sudo pacman -Rsn htop`<br>
 - `$ sudo pacman -Rsn vim`<br>
+- `$ gnome-font-viewer` <br>
 - Etc...
+
+<br>
+
+<b>Install Font-manager:</b><br>
+Open console and:<br>
+- `$ pacman -S font-manager `<br>
 
 <br>
 
