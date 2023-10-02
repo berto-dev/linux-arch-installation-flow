@@ -201,7 +201,8 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 
 <br><hr><br>
 
-### CUSTOMIZING & OPTIMIZATION (Gnome 4X.X)
+### POST INSTALLATION
+<sup><b><i>OPTIMIZATION, ESSENTIAL EXTENSIONS, CUSTOMIZING (Gnome 4X.X)</i></b><br><br></sup>
 
 <b>Set Autologin:</b><br>
 `$ sudo nano /etc/gdm/custom.conf`<br>
@@ -238,7 +239,7 @@ Open console and:<br>
 - `$ pacman -S font-manager `<br>
 
 - Install/Fix Unicode Charactes:<br>
-	Open Packages folder and add new fonts:
+	Open Packages folder and add new fonts (make attention to not install the useless fontforge):
 	- `$ git clone https://aur.archlinux.org/font-symbola.git ./symbola && cd ./symbola`<br>
 	- `$ makepkg -si && cd ..`<br>
 	Extra:<br>
