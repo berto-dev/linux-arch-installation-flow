@@ -318,16 +318,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)<br>
 	 	- note: you need to install `sudo pacnman -S pacman-contrib`, into the options remove classic command with this:<br>
 		```bash
-		__=$(printf '%*s' "$(tput cols)" '' | tr ' ' -)
-		kgx -- /bin/sh -c "sudo pacman -Syu &&
-		echo -e \"\n$__\n\" &&
-		sudo snap refresh &&
-		echo -e \"\n$__\n\" &&
-		flatpak update &&
-		echo -e \"\n$__\n\" &&
-		(pacman -Qdtq | grep -q .) && sudo pacman -Rns \$(pacman -Qdtq) || echo \"Afret pack: Nothig to clean...\" &&
-		echo -e \"\n$__\n\" &&
-		echo Done - Press enter to exit; read -n1 -r; exit"
+		kgx -- /bin/sh -c "echo -e \"\n***\n\nSystem Updating:\n\" && sudo pacman -Syu || echo -e \"\nNothing to update\" \ && echo -e \"\n***\n\nSnap Packs Updating:\n\" && sudo snap refresh && echo -e \"\n***\n\nFlatpack Updating:\n\" && flatpak update && echo -e \"\n***\n\nPacman Updating:\n\" && (pacman -Qdtq | grep -q .) && echo -e \"\n***\n\nPacks Cleaning:\" && sudo pacman -Rns \$(pacman -Qdtq) || echo \"Nothing to clean\" && echo -e \"\n***\n\" && echo Done - Perss Enter to exit; read && exit"
 		```
 	- [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) 
 	- [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
