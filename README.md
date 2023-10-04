@@ -306,6 +306,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git) (are you a js dev like me? so, install nvm, npm, nodejs...)<br>
 	`$ git clone https://aur.archlinux.org/nvm-desktop.git ./nvm-desktop && cd ./nvm-desktop`<br>
 	`$ makepkg -si && cd ..`<br>
+	Probably it install yarn, read how to clen it [here](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn) and [here](https://www.reddit.com/r/archlinux/comments/hdqhea/how_do_i_uninstall_yarn/)<br>
 
 
 - Gnome Extensions:<br>
