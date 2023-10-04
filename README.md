@@ -222,6 +222,7 @@ AutomaticLogin=username
 - `$ sudo pacman -Rsn gnome-maps`<br>
 - `$ sudo pacman -Rsn simple-scan`<br>
 - `$ sudo pacman -Rsn gnome-music`<br>
+- `$ sudo pacman -Rsn gnome-font-viewer` <br>
 - `$ sudo pacman -Rsn gnome-calendar`<br>
 - `$ sudo pacman -Rsn gnome-tour`<br>
 - `$ sudo pacman -Rsn malcontent` <top><sub><i>(parental control)</i></sub></top><br>
@@ -229,7 +230,6 @@ AutomaticLogin=username
 - `$ sudo pacman -Rsn totem` <top><sub><i>(video player)</i></sub></top><br> 
 - `$ sudo pacman -Rsn htop`<br>
 - `$ sudo pacman -Rsn vim`<br>
-- `$ gnome-font-viewer` <br>
 - Etc...
 
 <br>
