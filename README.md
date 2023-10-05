@@ -201,6 +201,12 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 		`$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snapd-gnome`<br>
 		`$ makepkg -si && cd ..`<br>
 		<i>on question "remove gnome conflict" ... ever yes.</i><br>
+  	Configure your global credential:<br>
+	`$ git config --global user.name "JohnDoe"`<br>
+	`$ git config --global user.email johndoe@example.com`<br>
+	`$ git config --global credential.helper store`<br>
+	`$ git config --list --show-origin`<br>
+	Are you in .config ? So good, restart terminal!<br>
 
 	- Now update and reboot system:<br>
 		`$ sudo pacman -Syu && reboot`<br>
