@@ -163,7 +163,7 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 
 - Install Network Manager: <br>
 	`$ sudo pacman -S networkmanager`<br>
- 	`$ sudo systemctl enable NetworkManager ||`<br>
+ 	`$ sudo systemctl enable NetworkManager`<br>
 	`$ sudo systemctl enable NetworkManager.service`<br>
 	`$ systemctl start NetworkManager.service`<br>
 
