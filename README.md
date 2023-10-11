@@ -169,7 +169,8 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	`$ sudo systemctl start NetworkManager.service`<br>
 	`$ sudo systemctl enable wpa_supplicant.service`<br>
 	now make or edit with `wifi.powersave=1` for disable power save [more info here](https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware) :<br>
-	`$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not recommended!)<br>
+	for intel: `$ sudo nano /etc/modprobe.d/iwlwifi.conf` and save inside `ptions iwlwifi power_save=1`<br>
+	other way: `$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not tested, not recommended!)<br>
 	need to refresh wi-fi? :<br>
 	`$ sudo systemctl restart NetworkManager && sudo systemctl enable wpa_supplicant.service`<br>
 
