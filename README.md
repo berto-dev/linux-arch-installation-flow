@@ -161,13 +161,14 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	`$ systemctl enable bluetooth.service`<br>
 	`$ systemctl start bluetooth.service `<br>
 
-- Install Network Manager: <br>
+- Install Network & Network Manager: <br>
+  	Before all: you need to get you good firmware for you wifi card... in mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi)<br>
 	`$ sudo pacman -S networkmanager`<br>
  	`$ sudo systemctl enable NetworkManager`<br>
 	`$ sudo systemctl enable NetworkManager.service`<br>
 	`$ sudo systemctl start NetworkManager.service`<br>
 	`$ sudo systemctl enable wpa_supplicant.service`<br>
-	now make or edit with `wifi.powersave=2` the :<br>
+	now make or edit with `wifi.powersave=1` for disable power save [more info here](https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware) :<br>
 	`$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not recommended!)<br>
 	need to refresh wi-fi? :<br>
 	`$ sudo systemctl restart NetworkManager && sudo systemctl enable wpa_supplicant.service`<br>
