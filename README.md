@@ -175,6 +175,14 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	need to refresh wi-fi? :<br>
 	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`<br>
 
+- Unlock mirrors:<br>
+	`$ sudo nano /etc/pacman.conf`<br>
+ 	find and uncomment (remove "#") the:
+	```
+	[multilib]
+	Include = /etc/pacman.d/mirrorlist
+	```
+	now you can install from mirrolist in 32/64
 
 - Use and prepare Packages <top><sub>(git/aur/other)</sub></top><br><blockquote>💩 make attention: Linux doesn't have a bond for make single folder for programs and more of thems are installed following the [FHS](https://it.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) standard insted have all files in their a property folder. Yep, it's a problem for understand what is installed and all relative dependecies but other solutions, currently, doesn't exist (or better, i don't find it). I suggest install all your packs via AUR (not gnome-software) and track it via Bauh. Anyway, you can try to modding folder (like below) of flatpack/flathub install [info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</blockquote>
 	- Make a folder for your "Package" (like Programs in window):<br>Open terminal in Home and enter into it `$ mkdir -p ./Packages && cd ./Packages`, now:<br>
@@ -329,6 +337,8 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ makepkg -si && cd ..`<br>
 	Probably it install yarn, read how to clen it [here](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn) and [here](https://www.reddit.com/r/archlinux/comments/hdqhea/how_do_i_uninstall_yarn/)<br>
 
+	- [Wine](https://www.winehq.org/) [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
+	`$ sudo pacman -S wine`
 
 - Gnome Extensions:<br>
 	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
