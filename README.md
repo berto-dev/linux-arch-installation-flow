@@ -101,7 +101,7 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-ext4.jpg)<br>
     
     Installation completed? Reboot<br><br>
-    
+
 - Add asterisks to consolle password, open it and...<br>
 	`$ cd /etc/`<br>
 	`$ sudo -s`<br>
@@ -232,6 +232,20 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 
 ### POST INSTALLATION
 <sup><b><i>OPTIMIZATION, ESSENTIAL EXTENSIONS, CUSTOMIZING (Gnome 4X.X)</i></b><br><br></sup>
+
+<b>Make a pratty sudo alias</b><br>
+Open terminal and copy:
+`$ alias super='sudo'`<br>
+`$ super whoami` if respond root, you can use super or sudo ;)<br><br>
+
+<b>install pretty shell:<br>
+- dowload [Firacode](https://www.nerdfonts.com/font-downloads) from list<br>
+- copy firacode in `.local/share/fonts` (simple local, not root) and refresh fonts chache via cli `$ fc-cache -f -v`<br>
+- install [starship](https://starship.rs/), open the terminal<br>
+	- `$ sudo nano ~/.bashrc`<br>
+	- add line: `eval "$(starship init bash)"` and save<br>
+	- add a theme like this: `$ starship preset bracketed-segments -o ~/.config/starship.toml` or [other... ](https://starship.rs/presets/)<br><br>
+
 
 <b>Set Autologin:</b><br>
 `$ sudo nano /etc/gdm/custom.conf`<br>
