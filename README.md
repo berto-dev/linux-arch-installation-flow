@@ -237,6 +237,8 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 Open terminal and copy:
 `$ alias super='sudo'`<br>
 `$ super whoami` if respond root, you can use super or sudo ;)<br><br>
+add super as a sudo:<br>
+`$ sudo gnome-text-editor /etc/sudoers` and add: `super ALL=(ALL:ALL) ALL` like root. Now you have complete alias for sudo.<br><br>
 
 <b>install pretty shell:<br>
 - dowload [Firacode](https://www.nerdfonts.com/font-downloads) from list<br>
