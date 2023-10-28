@@ -240,7 +240,7 @@ Open terminal and copy:
 add super as a sudo:<br>
 `$ sudo gnome-text-editor /etc/sudoers` and add: `super ALL=(ALL:ALL) ALL` like root. Now you have complete alias for sudo.<br><br>
 
-<b>install pretty shell:<br>
+<b>install pretty shell:</b><br>
 - dowload [Firacode](https://www.nerdfonts.com/font-downloads) from list<br>
 - copy firacode in `.local/share/fonts` (simple local, not root) and refresh fonts chache via cli `$ fc-cache -f -v`<br>
 - install [starship](https://starship.rs/), open the terminal<br>
@@ -293,6 +293,14 @@ Open console and:<br>
 
 
 
+<br>
+
+<b>Extend Gnome File shortcuts</b><br>
+
+open `~/.config/gtk-3.0` in File and add you shortcut, for me it is:<br>
+
+- `file:///home/master/Scrivania`<br>
+- `file:///run/media/master/Projects`
 
 <br>
 
