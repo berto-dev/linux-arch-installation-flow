@@ -350,19 +350,35 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
 	`$ makepkg -si && cd ..`<br>
 
+ 	- [Wine](https://www.winehq.org/) [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
+	`$ sudo pacman -S wine`<br>
+
+- dev pack:
+
 	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) (probably you are dev, so...)<br>
 	`$ git clone https://aur.archlinux.org/visual-studio-code-bin.git ./vscode && cd ./vscode`<br>
 	`$ makepkg -si && cd ..`<br>
 	fixing: if, on double click, vscode open the dir on desktop:<br>
 	`$ xdg-mime default org.gnome.Nautilus.desktop inode/directory`
 
-	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git) (are you a js dev like me? so, install nvm, npm, nodejs...)<br>
+	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git)<br>
 	`$ git clone https://aur.archlinux.org/nvm-desktop.git ./nvm-desktop && cd ./nvm-desktop`<br>
 	`$ makepkg -si && cd ..`<br>
 	Probably it install yarn, read how to clen it [here](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn) and [here](https://www.reddit.com/r/archlinux/comments/hdqhea/how_do_i_uninstall_yarn/)<br>
 
-	- [Wine](https://www.winehq.org/) [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
-	`$ sudo pacman -S wine`
+  	- [openssl](https://www.openssl.org/)<br>
+   	`$ sudo pacman -S openssl && pacman -Q openssl`
+
+   	- [mongodb](https://www.mongodb.com/)<br>
+	Install the shell:<br>
+	`$ git clone https://aur.archlinux.org/mongosh-bin.git  ./mongosh && cd ./mongosh`<br>
+	`$ makepkg -si && cd ..`<br>
+	`$ mongosh --version`<br><br>
+	Install the database:<br>
+	`$ git clone https://aur.archlinux.org/mongodb-bin.git  ./mongodb && cd ./mongodb`<br>
+	`$ makepkg -si && cd ..`<br>
+	`$ sudo systemctl start mongodb`<br>
+	`$ mongodb --version`<br><br>
 
 - Gnome Extensions:<br>
 	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
