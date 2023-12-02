@@ -142,7 +142,7 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
           
 		<i>you should probably have windows in the boot list.</i><br><br>
 
-- check/active HDMI system:<br><sup><sub>⚠️ Warning: this step is under checks, from 2023 in installer you have property driver but it install the open in any case. The result of this operations is dangerous and not stable</sub></sup>
+- check/active HDMI system:<br><sup><sub>⚠️ Warning: The result of this operations is dangerous and not stable!<br>⚠️ This step is under checks, from 2023 in the arch installer profile you can choose the "original nvidia driver" but its get the "open nouveau-driver" in any case (for fix wrong installation try [this pipeline](./nvidia-driver-fix.md)). </sub></sup>
 	- sound services for Nvidia:<br>
 		`$ lspci -k | grep -A 2 -E "(VGA|3D)"`<br>
 		if nvida driver is OK:<br>
