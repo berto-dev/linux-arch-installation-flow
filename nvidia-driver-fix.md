@@ -11,3 +11,13 @@ I don't know why but sometimes the arch installation don't follow the customizat
 
 - reboot and:<br>
   `nvidia-smi` to confirm process
+
+--- 
+
+The actions is terrible dangerous... in case of disaster you can try:
+
+-  `$ sudo mkinitcpio -P`
+-  `$ lspci -k | grep -A 2 -E "(VGA|3D)"`
+-  `$ sudo modprobe nouveau`
+-  `$ lsmod | grep nouveau`
+-  `$ sudo nano /etc/modules` and add `nouveau`
