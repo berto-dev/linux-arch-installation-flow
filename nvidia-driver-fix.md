@@ -6,7 +6,7 @@ I don't know why but sometimes the arch installation don't follow the customizat
   `$ sudo pacman -S nvidia nvidia-utils`<br>
 
 - remove old driver:<br>
-  `$ echo "blacklist nouveau" | sudo tee /etc/modprobe.d/blacklist-nouveau.conf`<br>
+  `$ sudo nano /etc/modprobe.d/blacklist-nouveau.conf` now write inside: `blacklist nouveau`<br>
   `$ sudo mkinitcpio -p linux`<br>
 
 - reboot and:<br>
