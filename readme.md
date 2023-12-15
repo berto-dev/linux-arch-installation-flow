@@ -1,5 +1,5 @@
 # linux arch installation flow
-<b> Tested on september 2023 </b>
+<b> Tested on dicember 2023 (under update!!) </b>
 
 ### A good reference:
 
@@ -54,9 +54,6 @@
 - Set Keyboard Layout:<br>
     `$ loadkeys it` (or other lang)<br>
 
-- Set time zone:<br>
-    `$ timedatectl set-ntp true`<br>
-
 - Test connection:<br>
   `$ ping archlinux.org`<br>
    ...If not working:<br>
@@ -73,34 +70,37 @@
 
 <br> <b>[STEP:3/3] INSTALL LINUX OS</b>
 
-- from 2022 you can use a graphical installer (it's good! :D):<br>
+- from 2022 you can use a parametric/graphical installer ( in dic 2023 it's now amazing! ):<br>
   `$ archinstall`<br>
 
    follow the instruction into installer ( and save your json profile if you want ;) )<br>
    <top><sub>SUGGEST: <i>Always select more than one mirror to avoid potential crashes or update failures</i></sub></top><br><br>
    Installation exemple:<br>
 
-    - set your lang everywhere... And `UTF8` character sets
-    - set disk to suggest layout and change `btrf` standard and:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;set `compressed` on true<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;set `swap` on true<br>
-    - set bootloader as `systemd-boot` (it's simplest of grub) and `gdm`
-    - set your name host (the computer device name)
-    - set a password and one profile, set it as an admin
-    - set profile to dekstop > gnome > nvidia property driver<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;if over 3000 series => +Tensor drivers<br> 
-    &nbsp;&nbsp;&nbsp;&nbsp;if Cuda and minor of 3000 => nvidia standrad<br>
-    - set audio to `pipewire`
-    - set kernel to `linux` or `linux-zen` (in case have rare hardware)
-    - set net equal to iso configuration<br>
+	- set multiple mirrors, exemple: _[Worldwide, United States, United Kingdom, Spain, Italy]_
+	- set your lang + UTF8 on keyboard : _[ layout: it, language: it_IT.UTF-8, encoding: UTF-8 ]_
+    	- set `disk layout` to `btrf` standard and choose : _[ no to subvolumes, no to separate home, yes to compression ]_
+     	- set `disk encripting` to your preference
+      	- set `swap` on `true`<br>
+	- set bootloader as `GRUB` (2023 systemd-boot it isn't present)
+    	- set your name host (the computer device name, ex: linux)
+    	- set a password and one profile, set it as an admin
+    	- set profile for a dekstop > gnome > nvidia property driver:<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if over 3000 series => nvidia proprietary or nouveau +Tensor drivers<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;if Cuda and minor of 3000 => nvidia proprietary<br>
+    	- set audio to `pipewire`
+    	- set kernel `linux-zen` (better performance) or the mainline `linux`
+    	- set net equal to iso configuration<br>
+	- set timezone on your place (ex: Europe/Rome)
+ 	- set NTP on `true`
 
-    an image of installer:<br> 
+	now install 🚀
+
+    an image of installer (WRONG, I MUST TO UPDATE IMAGE YET!):<br> 
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-btrf.jpg)<br>
-another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<br>
-    ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-ext4.jpg)<br>
     
-    Installation completed? Reboot<br><br>
+    Installation completed? Don't set nothing other! You are probably in the root of installer... Digit `exit` and `reboot` <br><br>
 
 - Add asterisks to consolle password, open it and...<br>
 	`$ cd /etc/`<br>
@@ -111,57 +111,85 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	`Defaults env_reset,pwfeedback`<br>
 	Ctrl + x and S for save<br>
 
-- Install windows in boot loader
+- UPDATING... <del>Install windows in boot loader <sup>(if you have windows, obious)</sup></del>
 
-	-  start autoupdater service:<br>
-		`$ sudo systemctl start systemd-boot-update.service`<br>
-		`$ bootctl update`<br>
+	-   <del>start autoupdater service:<br></del>
+		<del>`$ sudo systemctl start systemd-boot-update.service`<br></del>
+		<del>`$ bootctl update`<br></del>
       
-	In some case system not view windows EFI if in a second drive, so...<br>
+	<del>In some case system not view windows EFI if in a second drive, so...<br></del>
 
-	-  find windows partition (EFI of microsoft):<br>
-		`$ sudo fdisk -l`<br>
+	-  <del>find windows partition (EFI of microsoft):<br></del>
+		<del>`$ sudo fdisk -l`<br></del>
 
-	-  mount it ("b1" or other of efi win):<br>
-		`$ mount /dev/sdb1 /mnt`<br>
+	-  <del>mount it ("b1" or other of efi win):<br></del>
+		<del>`$ mount /dev/sdb1 /mnt`<br></del>
 
-	-  copy efi into boots:<br>
-		`$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br>
+	-  <del>copy efi into boots:<br></del>
+		<del>`$ sudo cp -r /mnt/EFI/Microsoft/ /boot/EFI/Microsoft/`<br></del>
 
-		extra step only if not view the windows label:<br>
-		create a new /boot/loader/entries/windows.conf file:<br>
-		`$ sudo nano /boot/loader/entries/windows.conf`<br>
-		and write into it:
-		```
+		<del>extra step only if not view the windows label:<br></del>
+		<del>create a new /boot/loader/entries/windows.conf file:<br></del>
+		<del>`$ sudo nano /boot/loader/entries/windows.conf`<br></del>
+		<del>and write into it:</del>
+		<del>```
 		title   Windows 10
 		efi     /EFI/Microsoft/Boot/bootmgfw.efi
-		```
-	-  check ends:<br>
-		`$ bootctl update`<br>
-		`$ bootctl list`<br><br>
+		```</del>
+	-  <del>check ends:<br></del>
+		<del>`$ bootctl update`<br></del>
+		<del>`$ bootctl list`<br><br></del>
           
-		<i>you should probably have windows in the boot list.</i><br><br>
+		<del><i>you should probably have windows in the boot list.</i><br><br></del>
 
-- check/active HDMI system:<br><sup><sub>⚠️ Warning: The result of this operations is dangerous and not stable!<br>⚠️ This step is under checks, from 2023 in the arch installer profile you can choose the "original nvidia driver" but its get the "open nouveau-driver" in any case (for fix wrong installation try [this pipeline](./nvidia-driver-fix.md)). </sub></sup>
-	- sound services for Nvidia:<br>
-		`$ lspci -k | grep -A 2 -E "(VGA|3D)"`<br>
-		if nvida driver is OK:<br>
-		`$ modprobe nvidia dmsg`<br>
-		wait a 30/60 seconds or reboot for check sound in control settings panels<br>
+- Unlock mirrors:<br>
+	`$ sudo nano /etc/pacman.conf`<br>
+ 	find and uncomment (remove "#") the:
+	```
+	[multilib]
+	Include = /etc/pacman.d/mirrorlist
+	```
+	now you can install from mirrolist in 32/64
 
-	- set Nvidia settings:<br>
-		`$ sudo pacman -Sy nvidia xconfig && pacman -Syu nvidia-settings`<br>
-		now reboot...<br>
-
-- Launch audio services...<br>
+- Launch audio services... <sup>(if not running)</sup><br>
+  	`$ pactl info | grep "Server Name"` if not result "Name: PulseAudio (on PipeWire 0.XXXX)":<br>
 	`$ systemctl --user --now enable pipewire`<br>
   	`$ systemctl --user list-unit-files | grep -E 'pulse|wire' | awk '{ print $1,"-", $2 }'` (check enables services, is it true?)<br>
 
-- Launch bluetooth services:<br>
+- Launch bluetooth services: <sup>(if not running)</sup><br>
+	`$ systemctl status bluetooth.service` if isn't "active (running)":<br>
 	`$ systemctl enable bluetooth.service`<br>
 	`$ systemctl start bluetooth.service `<br>
 
-- Install Network & Network Manager: <br>
+- install Git for cloning pro packages<br>
+	`$ sudo pacman -S git base-devel`<br>
+
+- install [Pamac](https://www.osside.net/wp-content/uploads/2023/07/pamacgtk43.webp) for a real [AUR](https://aur.archlinux.org/packages) Store packages management<br><br>
+	- install trizen:<br>
+	`$ git clone https://aur.archlinux.org/trizen.git ./trizen`<br>
+	`$ makepkg -sri`<br>
+	- install pamac:<br>
+	`trizen -S pamac-aur-git libpamac-git archlinux-appstream-data-pamac`
+	- remove trizen:<br>
+	`$ sudo pacman -Runs trizen`<br>
+	set inside pamac option > thirdy parts > AUR turned ON...  Now you can get all aur packages from Pamac Store Application: "**Ṩ**"<br><br>
+   	if you would remove pamac you can do:<br>
+	`$ sudo pacman -R pamac-aur-git libpamac-git archlinux-appstream-data-pamac`<br>
+	`$ sudo pacman -S archlinux-appstream-data`<br>
+
+- add gpu settings {**Ṩ** nvidia-settings}: <sup>(if not installer)</sup><br>
+	`$ sudo pacman -S nvidia-settings`<br>
+
+- install snaps backups system {**Ṩ** snapper, snapper-git, grub-btrfs, btrfs-assistant } <br>
+  	1) install packages: `$ sudo pacman -S snapper snapper-git grub-btrfs btrfs-assistant`<br>
+   	2) go in root `$ cd /` and check subvolumes: `$ btrfs subvolume list /`<br>
+	3) if not exist snapshots:<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ su -` (become the root)<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ cd /` (enter in the root)<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ snapper -c root create-config /`<br>
+ 	4) Now you can open the btrf-assistant, get the snap and set or make new shoots! (suggest: after all this files, make a shoot)
+
+- Install Network & Network Manager {**Ṩ** networkmanager}: <br>
   	Before all: you need to get you good firmware for you wifi card... in mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi)<br>
 	`$ sudo pacman -S networkmanager`<br>
   	now... you can have list of networks services via: `systemctl list-unit-files --state=enabled` and, eventually, enable it:<br>
@@ -175,58 +203,8 @@ another way is partitioned in fat or ext4 mix single btrf (not raccomended way)<
 	need to refresh wi-fi? :<br>
 	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`<br>
 
-- Unlock mirrors:<br>
-	`$ sudo nano /etc/pacman.conf`<br>
- 	find and uncomment (remove "#") the:
-	```
-	[multilib]
-	Include = /etc/pacman.d/mirrorlist
-	```
-	now you can install from mirrolist in 32/64
-
-- Use and prepare Packages <top><sub>(git/aur/other)</sub></top><br><blockquote>💩 make attention: Linux doesn't have a bond for make single folder for programs and more of thems are installed following the [FHS](https://it.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) standard insted have all files in their a property folder. Yep, it's a problem for understand what is installed and all relative dependecies but other solutions, currently, doesn't exist (or better, i don't find it). I suggest install all your packs via AUR (not gnome-software) and track it via Bauh. Anyway, you can try to modding folder (like below) of flatpack/flathub install [info](https://www.reddit.com/r/flatpak/comments/a1l8wk/methods_to_save_space_on_your_root_partition/)] - [[flatpak-installation](https://man7.org/linux/man-pages/man5/flatpak-installation.5.html)] - [[user-vs-system-install](https://docs.flathub.org/docs/for-users/user-vs-system-install)]</blockquote>
-	- Make a folder for your "Package" (like Programs in window):<br>Open terminal in Home and enter into it `$ mkdir -p ./Packages && cd ./Packages`, now:<br>
-		- open nautilus and press `ctrl+L`<br>
-		- copy `/etc/flatpak/installations.d` on address bar<br>
-		- open that folder in terminal ad with set CLI: `sudo nano extra.conf`<br>
-		- copy this for set a new installation folder:<br>
-		```txt
-		[Installation "packs"]
-		Path=/home/YOURUSRNAME/Packages
-		DisplayName=Packages Installation
-		StorageType=harddisk
-		```
-		you can use it in this way for flatpack<br>
-		```
-		1. Add a remote with: `flatpak --installation=packs remote-add flathub https://flathub.org/repo/flathub.flatpakrepo`
-		2. Install to it with: `flatpak --installation=packs install flathub org.inkscape.Inkscape` (inkscape is an exemple)
-		3. Run from it with: flatpak run org.inkscape.Inkscape
-		```
-
-- install Git for cloning pro packages<br>
-	`$ sudo pacman -S git`<br>
-
-- Install [Snap Store](https://snapcraft.io/install/snap-store/arch) in arch via console<br>
-	`$ git clone https://aur.archlinux.org/snapd.git ./snapd && cd ./snapd`<br>
-	`$ makepkg -si && cd ..`<br>
-	`$ sudo systemctl enable --now snapd.socket`<br>
-	`$ sudo ln -s /var/lib/snapd/snap /snap`<br>
-	return in <i>./Packages</i> and add to gnome software:<br>
-	`$ git clone https://aur.archlinux.org/snapd-glib.git ./snap-glib && cd ./snap-glib`<br>
-		`$ makepkg -si && cd ..`<br>
-		return in <i>./Packages</i> and add to gnome software:<br>
-		`$ git clone https://aur.archlinux.org/gnome-software-snapd.git ./snapd-gnome && cd ./snapd-gnome`<br>
-		`$ makepkg -si && cd ..`<br>
-		<i>on question "remove gnome conflict" ... ever yes.</i><br>
-  	Configure your global credential:<br>
-	`$ git config --global user.name "JohnDoe"`<br>
-	`$ git config --global user.email johndoe@example.com`<br>
-	`$ git config --global credential.helper store`<br>
-	`$ git config --list --show-origin`<br>
-	Are you in .config ? So good, restart terminal!<br>
-
-	- Now update and reboot system:<br>
-		`$ sudo pacman -Syu && reboot`<br>
+- Now update and reboot system:<br>
+	`$ sudo pacman -Syu && reboot`<br>
 
 <br><hr><br>
 
@@ -258,28 +236,9 @@ AutomaticLoginEnable=True
 AutomaticLogin=username
 ```
 
-<br><b>Debloat packs:</b><br>
-
-<top><sub><i>Note: Rscgn remove all dependencies (dangerous) of pack</i></sub></top><br>
-
-- `$ sudo pacman -Q` <top><sub><i>(for list) (use "| grep NAMEPACK" for detect it)</i></sub></top><br>
-- `$ sudo pacman -Rsn gnome-contacts`<br>
-- `$ sudo pacman -Rsn gnome-maps`<br>
-- `$ sudo pacman -Rsn simple-scan`<br>
-- `$ sudo pacman -Rsn gnome-music`<br>
-- `$ sudo pacman -Rsn gnome-font-viewer` <br>
-- `$ sudo pacman -Rsn gnome-calendar`<br>
-- `$ sudo pacman -Rsn gnome-tour`<br>
-- `$ sudo pacman -Rsn malcontent` <top><sub><i>(parental control)</i></sub></top><br>
-- `$ sudo pacman -Rsn gnome-photos` <top><sub><i>(photo albums)</i></sub></top><br> 
-- `$ sudo pacman -Rsn totem` <top><sub><i>(video player)</i></sub></top><br> 
-- `$ sudo pacman -Rsn htop`<br>
-- `$ sudo pacman -Rsn vim`<br>
-- Etc...
-
 <br>
 
-<b>Install Font-manager:</b><br>
+<b>Install font manager {**Ṩ** font-manager}:</b><br>
 Open console and:<br>
 - `$ pacman -S font-manager `<br>
 
@@ -291,6 +250,26 @@ Open console and:<br>
 	- `$ sudo pacman -S noto-fonts-emoji` or/and `$ sudo pacman -S ttf-font-awesome`<br>
 	- `$ sudo fc-cache -f -v`<br>
 
+<br><b>Debloat packs:</b><br>
+
+<top><sub><i>Note: Rscgn remove all dependencies (dangerous) of pack</i></sub></top><br>
+
+- `$ sudo pacman -Q` <top><sub><i>(for list) (use "| grep NAMEPACK" for detect it)</i></sub></top><br>
+- `$ sudo pacman -Rusn gnome-contacts`<br>
+- `$ sudo pacman -Rusn gnome-maps`<br>
+- `$ sudo pacman -Rusn simple-scan`<br>
+- `$ sudo pacman -Rusn gnome-music`<br>
+- `$ sudo pacman -Rusn gnome-font-viewer` <br> <top><sub><i>(if you font manager)</i></sub></top><br> 
+- `$ sudo pacman -Rusn gnome-calendar`<br>
+- `$ sudo pacman -Rusn gnome-tour`<br>
+- `$ sudo pacman -Rusn malcontent` <top><sub><i>(parental control)</i></sub></top><br>
+- `$ sudo pacman -Rusn loupe` <top><sub><i>(photo albums)</i></sub></top><br> 
+- `$ sudo pacman -Rusn totem` <top><sub><i>(video player)</i></sub></top><br> 
+- `$ sudo pacman -Rusn htop`<br>
+- `$ sudo pacman -Rusn vim`<br>
+- `$ sudo pacman -Rusn gnome-tour`<br>
+- `$ sudo pacman -Rusn gnome-software` <top><sub><i>(if you use pamac)</i></sub></top><br> 
+- Etc...
 
 
 <br>
@@ -306,12 +285,12 @@ open `~/.config/gtk-3.0` in File and add you shortcut, for me it is:<br>
 
 <b>Expand Files (nautilus):</b><br>
 Open console and:<br>
-- `$ git clone https://aur.archlinux.org/nautilus-admin.git ./nautilus-admin`<br>
+- `$ git clone https://aur.archlinux.org/nautilus-admin.git ./nautilus-admin` {**Ṩ** nautilus-admin}<br>
 - `$ cd nautilus-admin && makepkg && nautilus -q `<br>
    > note:you can try "sudo pacman -Sy nautilus-admin && nautilus -q"
 
 <br>
-or other extensions on [nautilus-extension in github](https://github.com/topics/nautilus-extension) and [GNOME/Files](https://wiki.archlinux.org/title/GNOME/Files)<br>
+or other extensions on [nautilus-extension in github](https://github.com/topics/nautilus-extension) and [GNOME/Files](https://wiki.archlinux.org/title/GNOME/Files) or direct in pamac!<br>
 
 <br>
 
@@ -319,57 +298,52 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 - AUR Packs:<br>
 
-	- pacman -S filemanager-actions (currently not available)<br>
+	- <del>pacman -S filemanager-actions</del> (currently not available)<br>
 
-	- [snapper gui](https://github.com/ricardomv/snapper-gui) (graphical backup system helper)<br>
-	- `$ git clone https://aur.archlinux.org/snapper-gui-git.git ./snapper-gui && cd ./snapper-gui`<br>
-	- `$ makepkg -si && cd .. `<br>
-
-
-	- [Bauh](https://github.com/vinifmor/bauh)<br>
-	`$ git clone  https://aur.archlinux.org/bauh.git ./bauh && cd ./bauh`<br>
-	`$ makepkg -si && cd ..`<br>
-
-	- [Easy Effects](https://github.com/wwmm/easyeffects)<br>
+	- [Easy Effects](https://github.com/wwmm/easyeffects) {**Ṩ** easyeffects-git} <br>
 	`$ git clone https://aur.archlinux.org/easyeffects-git.git ./easyeffects && cd ./easyeffects`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Gradience](https://github.com/GradienceTeam/Gradience)<br>
-	`$ git clone https://aur.archlinux.org/gradience.git ./gradience && cd ./gradience`<br>
-	`$ makepkg -si && cd ..`<br>
-
-	- [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments)<br>
+	- [Fragments](https://flathub.org/apps/details/de.haeckerfelix.Fragments) {**Ṩ** fragments-git}<br>
 	`$ git clone https://aur.archlinux.org/fragments-git.git ./fragments && cd ./fragments`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Impression](https://flathub.org/apps/io.gitlab.adhami3310.Impression)<br>
+	- [Impression](https://flathub.org/apps/io.gitlab.adhami3310.Impression) {**Ṩ** impression}<br>
 	`$ git clone https://aur.archlinux.org/impression.git ./impression && cd ./impression`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [google chrome](https://aur.archlinux.org/packages/google-chrome) (it's google standard, not [chromium](https://wiki.archlinux.org/title/chromium))<br>
+	- [google chrome](https://aur.archlinux.org/packages/google-chrome) {**Ṩ** google-chrome} (it's google standard, not [chromium](https://wiki.archlinux.org/title/chromium))<br>
 	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
 	`$ makepkg -si && cd ..`<br>
 
- 	- [Wine](https://www.winehq.org/) [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
+	- [google chrome](https://aur.archlinux.org/packages/google-chrome) {**Ṩ** google-chrome} (it's google standard, not [chromium](https://wiki.archlinux.org/title/chromium))<br>
+	`$ git clone https://aur.archlinux.org/google-chrome.git ./google-chrome && cd ./google-chrome`<br>
+	`$ makepkg -si && cd ..`<br>
+
+	- [Gradience](https://github.com/GradienceTeam/Gradience) {**Ṩ** gradience}<br>
+	`$ git clone https://aur.archlinux.org/gradience.git ./gradience && cd ./gradience`<br>
+	`$ makepkg -si && cd ..`<br>
+
+ 	- [Wine](https://www.winehq.org/) {**Ṩ** wine} [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
 	`$ sudo pacman -S wine`<br>
 
-- dev pack:
+- dev pack (if you need one, we love you!) :
 
-	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) (probably you are dev, so...)<br>
+	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) {**Ṩ** visual-studio-code-bin}<br>
 	`$ git clone https://aur.archlinux.org/visual-studio-code-bin.git ./vscode && cd ./vscode`<br>
 	`$ makepkg -si && cd ..`<br>
 	fixing: if, on double click, vscode open the dir on desktop:<br>
 	`$ xdg-mime default org.gnome.Nautilus.desktop inode/directory`
 
-	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git)<br>
+	- [nvm-desktop](https://aur.archlinux.org/nvm-desktop.git) {**Ṩ** nvm-desktop} <br>
 	`$ git clone https://aur.archlinux.org/nvm-desktop.git ./nvm-desktop && cd ./nvm-desktop`<br>
 	`$ makepkg -si && cd ..`<br>
 	Probably it install yarn, read how to clen it [here](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn) and [here](https://www.reddit.com/r/archlinux/comments/hdqhea/how_do_i_uninstall_yarn/)<br>
 
-  	- [openssl](https://www.openssl.org/)<br>
+  	- [openssl](https://www.openssl.org/) {**Ṩ** openssl} <br>
    	`$ sudo pacman -S openssl && pacman -Q openssl`
 
-   	- [mongodb](https://www.mongodb.com/)<br>
+   	- [mongodb](https://www.mongodb.com/) {**Ṩ** mongosh-bin} {**Ṩ** mongodb-bin} <br>
 	Install the shell:<br>
 	`$ git clone https://aur.archlinux.org/mongosh-bin.git  ./mongosh && cd ./mongosh`<br>
 	`$ makepkg -si && cd ..`<br>
@@ -381,7 +355,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ mongodb --version`<br><br>
 
 - Gnome Extensions:<br>
-	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) via AUR for extension management<br>
+	before all: if you use chrome need to install [gnome browser connector](https://aur.archlinux.org/packages/gnome-browser-connector) {**Ṩ** gnome-browser-connector} via AUR for extension management<br>
 	`$ git clone https://aur.archlinux.org/gnome-browser-connector.git ./chrome-connector && cd ./chrome-connector`<br>
 	`$ makepkg -si && cd ..`<br>
 
@@ -392,41 +366,33 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 		```bash
 		kgx -- /bin/sh -c "echo -e \"\n***\n\nSystem Updating:\n\" && sudo pacman -Syu || echo -e \"\nNothing to update\" \ && echo -e \"\n***\n\nSnap Packs Updating:\n\" && sudo snap refresh && echo -e \"\n***\n\nFlatpack Updating:\n\" && flatpak update && echo -e \"\n***\n\nPacman Updating:\n\" && (pacman -Qdtq | grep -q .) && echo -e \"\n***\n\nPacks Cleaning:\" && sudo pacman -Rns \$(pacman -Qdtq) || echo \"Nothing to clean\" && echo -e \"\n***\n\" && echo Done - Perss Enter to exit; read && exit"
 		```
-	- [Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/) 
+	- <del>[Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/)</del> 
 	- [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
 	- [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
 	- [Blur my shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 	- [Burn My Windows](https://extensions.gnome.org/extension/4679/burn-my-windows/)
 	- [Compact quick settings](https://extensions.gnome.org/extension/5527/compact-quick-settings/)
 	- [Compiz windows effect](https://extensions.gnome.org/extension/3210/compiz-windows-effect/)
-	- [Clipboard Manager](https://extensions.gnome.org/extension/4422/gnome-clipboard/)
+	- [Clipboard Manager](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
-	- <s>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</s> 2023: gnome 44.X uncompatible
-	- [Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)
+	- <del>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</del> 2023: gnome 44.X uncompatible
+	- <del>[Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)</del> 2023: Under test
 	- [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
-	- [No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/) (optional)
+	- <del>[No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/)</del> 2023: under test (optional)
 	- [Removable drive in menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
 	- [Settings center](https://extensions.gnome.org/extension/2899/settingscenter/)
-	- [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S gnome-screenshot`</sub></sup><br>
+	- <del>[Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)</del><br> 2023: under test (optional)
+	<del>&nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S gnome-screenshot`</sub></sup></del><br>
 	- [Top bar organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
 	- [Trayicons reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
 	- [User themes](https://extensions.gnome.org/extension/19/user-themes/)
 	- [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
 	- [Weather in the clock](https://extensions.gnome.org/extension/5470/weather-oclock/)
 	- [Wi-Fi Qr](https://extensions.gnome.org/extension/5416/wifi-qrcode/)
-	- <s>[Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)</s> 2023: currently useless<br>
+	- <del>[Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)</del> 2023: currently useless<br>
 
 
-  preinstalled undebloatable ON/OFF list
-	- Application Menu: OFF
-	- Auto Move Windows: OFF
-	- Launch new istance: OFF
-	- Native Window Placement: ON
-	- Place Status Indicator: OFF
-	- Screenshot Window Sizer: ON
-	- Window List: OFF
-	- Workspace Indicator: OFF
+  set all preinstalled undebloatable on OFF without Pamac Update Indicator and Removeble Drive Menu
 
 <br>
 
@@ -453,7 +419,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 ### CLEANING SYSTEM
 
 or you can install [bleachbit](https://www.bleachbit.org/download)<br>
-- bleachbit AUR:<br>
+- bleachbit AUR {**Ṩ** bleachbit-git}:<br>
 	`$ git clone https://aur.archlinux.org/bleachbit-git.git ./bleachbit && cd ./bleachbit`<br>
 	`$ makepkg -si && cd ..`<br><br>
 
