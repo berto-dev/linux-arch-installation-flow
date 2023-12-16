@@ -177,6 +177,11 @@
    	if you would remove pamac you can do:<br>
 	`$ sudo pacman -R pamac-aur-git libpamac-git archlinux-appstream-data-pamac`<br>
 	`$ sudo pacman -S archlinux-appstream-data`<br>
+	Pamac follow the standard directory of FSH or package instruction, press ctrl+L and:<br>
+ 	&nbsp;&nbsp;&nbsp;&nbsp;» ALL OFFICIAL REPOS DOWNLOAD: _/var/lib/pacman/local_<br>
+ 	&nbsp;&nbsp;&nbsp;&nbsp;» AUR DOWNLOAD AD UNSPECIFIED: _/opt_ (suggested for all other software)<br>
+ 	&nbsp;&nbsp;&nbsp;&nbsp;» FLATPAK DOWNLOAD PACKS: _/var/lib/flatpak_<br>
+ 	&nbsp;&nbsp;&nbsp;&nbsp;» DEPENCIES AND LIBS: _/var/lib/_ and _/lib64_<br>
 
 - add gpu settings {**Ṩ** nvidia-settings}: <sup>(if not installer)</sup><br>
 	`$ sudo pacman -S nvidia-settings`<br>
