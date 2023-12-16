@@ -225,9 +225,11 @@ add super as a sudo:<br>
 - dowload [Firacode](https://www.nerdfonts.com/font-downloads) from list<br>
 - copy firacode in `.local/share/fonts` (simple local, not root) and refresh fonts chache via cli `$ fc-cache -f -v`<br>
 - install [starship](https://starship.rs/), open the terminal<br>
+	- `$ pacman -S starship`<br>
 	- `$ sudo nano ~/.bashrc`<br>
 	- add line: `eval "$(starship init bash)"` and save<br>
-	- add a theme like this: `$ starship preset bracketed-segments -o ~/.config/starship.toml` or [other... ](https://starship.rs/presets/)<br><br>
+	- add a theme like this: `$ starship preset bracketed-segments -o ~/.config/starship.toml` or [other... ](https://starship.rs/presets/)<br>
+ 	- end all with `$ sudo pacman -S screenfetch && clear && screenfetch` for view somethigs of beautyful<br>
 
 
 <b>Set Autologin:</b><br>
