@@ -369,14 +369,14 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ git clone https://aur.archlinux.org/gnome-browser-connector.git ./chrome-connector && cd ./chrome-connector`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
+	- <del>[Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)</del> (possible conflict with Desktop GTK4 extension)<br>
 	- [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)<br>
 	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)<br>
 	 	- note: you need to install `sudo pacnman -S pacman-contrib`, into the options remove classic command with this:<br>
 		```bash
 		kgx -- /bin/sh -c "echo -e \"\n***\n\nSystem Updating:\n\" && sudo pacman -Syu || echo -e \"\nNothing to update\" \ && echo -e \"\n***\n\nSnap Packs Updating:\n\" && sudo snap refresh && echo -e \"\n***\n\nFlatpack Updating:\n\" && flatpak update && echo -e \"\n***\n\nPacman Updating:\n\" && (pacman -Qdtq | grep -q .) && echo -e \"\n***\n\nPacks Cleaning:\" && sudo pacman -Rns \$(pacman -Qdtq) || echo \"Nothing to clean\" && echo -e \"\n***\n\" && echo Done - Perss Enter to exit; read && exit"
 		```
-	- <del>[Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/)</del> 
+	- <del>[Blur on lockscreen](https://extensions.gnome.org/extension/2935/control-blur-effect-on-lock-screen/)</del> (native in gnome 45)
 	- [Bluetooth battery indicator](https://extensions.gnome.org/extension/3991/bluetooth-battery/)
 	- [Bluetooth quick connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
 	- [Blur my shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
@@ -386,12 +386,12 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Clipboard Manager](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 	- [Desktop GTK4 (icons,drag,dock)](https://extensions.gnome.org/extension/5263/gtk4-desktop-icons-ng-ding/)
 	- <del>[Day/night theme switcher](https://extensions.gnome.org/extension/4968/lightdark-theme-switcher/)</del> 2023: gnome 44.X uncompatible
-	- <del>[Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)</del> 2023: Under test
+	- <del>[Easy Screen Cast](https://extensions.gnome.org/extension/690/easyscreencast/)</del> (2023: native with gnome screeshot)
 	- [Just perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 	- <del>[No titlebar when maximized](https://extensions.gnome.org/extension/4630/no-titlebar-when-maximized/)</del> 2023: under test (optional)
 	- [Removable drive in menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
 	- [Settings center](https://extensions.gnome.org/extension/2899/settingscenter/)
-	- <del>[Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)</del><br> 2023: under test (optional)
+	- <del>[Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/)</del> (2023: native with gnome screeshot)<br>
 	<del>&nbsp;&nbsp;&nbsp;&nbsp;<sup><sub>note: you need to install `sudo pacnman -S gnome-screenshot`</sub></sup></del><br>
 	- [Top bar organizer](https://extensions.gnome.org/extension/4356/top-bar-organizer/)
 	- [Trayicons reloaded](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
@@ -399,7 +399,6 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- [Vitals](https://extensions.gnome.org/extension/1460/vitals/)
 	- [Weather in the clock](https://extensions.gnome.org/extension/5470/weather-oclock/)
 	- [Wi-Fi Qr](https://extensions.gnome.org/extension/5416/wifi-qrcode/)
-	- <del>[Window navigator](https://extensions.gnome.org/extension/10/windownavigator/)</del> 2023: currently useless<br>
 
 
   set all preinstalled undebloatable on OFF without Pamac Update Indicator and Removeble Drive Menu
