@@ -190,13 +190,15 @@
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ snapper -c root create-config /`<br>
  	4) Now you can open the btrf-assistant, get the snap and set or make new shoots! (suggest: after all this files, make a shoot)
 
-- Install Network & Network Manager {**Ṩ** networkmanager}: <br>
-  	Before all: you need to get you good firmware for you wifi card if is a basic installation... In mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi) with all instructions for install inside the .tar pack (goodluck my friends).<br>
-	`$ sudo pacman -S networkmanager`<br>
+- Install [Network & Network Manager](https://archlinux.org/packages/extra/x86_64/networkmanager/) {**Ṩ** networkmanager}: <br>
+  	Before all: you need to get you good firmware for you wifi card if is a basic installation... In mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi) with all instructions for install inside the .tar pack (goodluck my friends).<br><br>
+
+	if `$ systemctl status NetworkManager` respon "could not be found": 
+	`$ sudo pacman -S networkmanager` <br>
   	now... you can have list of networks services via: `systemctl list-unit-files --state=enabled` and, eventually, enable it:<br>
  	`$ sudo systemctl enable NetworkManager`<br>
-	`$ sudo systemctl enable NetworkManager.service`<br>
-	`$ sudo systemctl start NetworkManager.service`<br>
+	`$ sudo systemctl start NetworkManager`<br>
+  	in some cases, when strict necessary to fix the random down connection:<br>
 	`$ sudo systemctl enable wpa_supplicant.service`<br>
 	now make or edit with `wifi.powersave=1` for disable power save [more info here](https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware) :<br>
 	for intel: `$ sudo nano /etc/modprobe.d/iwlwifi.conf` and save inside `ptions iwlwifi power_save=1`<br>
