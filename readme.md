@@ -191,7 +191,7 @@
  	4) Now you can open the btrf-assistant, get the snap and set or make new shoots! (suggest: after all this files, make a shoot)
 
 - Install Network & Network Manager {**Ṩ** networkmanager}: <br>
-  	Before all: you need to get you good firmware for you wifi card... in mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi)<br>
+  	Before all: you need to get you good firmware for you wifi card if is a basic installation... In mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi) with all instructions for install inside the .tar pack (goodluck my friends).<br>
 	`$ sudo pacman -S networkmanager`<br>
   	now... you can have list of networks services via: `systemctl list-unit-files --state=enabled` and, eventually, enable it:<br>
  	`$ sudo systemctl enable NetworkManager`<br>
