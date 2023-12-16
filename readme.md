@@ -155,6 +155,7 @@
   	`$ pactl info | grep "Server Name"` if not result "Name: PulseAudio (on PipeWire 0.XXXX)":<br>
 	`$ systemctl --user --now enable pipewire`<br>
   	`$ systemctl --user list-unit-files | grep -E 'pulse|wire' | awk '{ print $1,"-", $2 }'` (check enables services, is it true?)<br>
+	If you have some problem see [this](https://unix.stackexchange.com/a/390908) for [pavucontrol](https://archlinux.org/packages/extra/x86_64/pavucontrol/) and extras: [easyeffects](https://aur.archlinux.org/packages/easyeffects-git) or [JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux) 
 
 - Launch bluetooth services: <sup>(if not running)</sup><br>
 	`$ systemctl status bluetooth.service` if isn't "active (running)":<br>
