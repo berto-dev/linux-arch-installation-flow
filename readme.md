@@ -164,6 +164,10 @@
 	`$ gsettings set org.gnome.mutter center-new-windows true`
 <br><br>
 
+- Swipe win/alt <sup>if you have it reversed</sup>:<br>
+	`$ setxkbmap -option altwin:swap_alt_win`
+<br><br>
+
 - Launch audio services... <sup>(if not running)</sup><br>
   	`$ pactl info | grep "Server Name"` if not result "Name: PulseAudio (on PipeWire 0.XXXX)":<br>
 	`$ systemctl --user --now enable pipewire`<br>
