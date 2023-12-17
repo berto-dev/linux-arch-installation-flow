@@ -408,7 +408,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 #### Add a simple shell theme packs (it's my simple theme asset)
 
-1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.zip) and unzip it.
+1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.tar.xz) and unzip it.
 
 2) open Theme-Pack folder and...<br>
 	- open nautilus and unlock hidden files
