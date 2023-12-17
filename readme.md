@@ -7,8 +7,9 @@
 2 - [youtube](https://www.youtube.com/watch?v=RsrPrA8NJHk) / [youtube](https://www.youtube.com/watch?v=LGhifbn6088&t=309s) / [youtube](https://www.youtube.com/watch?v=C3D_qzw94v8) / [youtube](https://www.youtube.com/watch?v=sm_fuBeaOqE) / [youtube](https://www.youtube.com/watch?v=JRdYSGh-g3s)<br>
 3 - [Stack Exchange Network](https://askubuntu.com/questions/726972/dual-boot-windows-10-and-linux-ubuntu-on-separate-hard-drives)<br>
 
----
-<br> <b>[STEP:1/3] ISO AND BOOTABLE</b>
+<br><hr><br>
+
+<b>[STEP:1/3] ISO AND BOOTABLE</b>
 
 - Download arch iso linux:<br>
   [archlinux official downloads](https://archlinux.org/download/) via:<br>
@@ -27,32 +28,35 @@
     		- latest ISO from [ARGENTINA Mirror](https://mirrors.eze.sysarmy.com/archlinux/iso/latest/)<br>
 
 - Make an iso bootable usb<br>
-	- if in windows: download [rufus official downloads](https://rufus.ie/it/) and start to create an <i>iso bootable</i> usb drive with arch iso image
+	- if in _windows_: download [rufus official downloads](https://rufus.ie/it/) and start to create an <i>iso bootable</i> usb drive with arch iso image
     	- raccommended: check your bios is an uefi:<br>
       	...in bios you can find it in the options<br>
       	...in windows: win+R and write "msinfo32" and "BIOS" (or BIOS mode), check if "secure boot" is off or set it via bitlocker<br>
     	- [raccommended option](https://blog.htbaa.com/wp-content/uploads/2013/11/rufus.png): MBR, FAT32, 8192byte, and load iso of arch.<br>
-
-	- if in linux:
+	- if in _linux_:
 		- use [Impression](https://gitlab.com/adhami3310/Impression)
+<br><br>
 
 - No second drive? need a partition:<br><sup><sub>⚠️ Warning: if you not an expert see on youtube before this action! Shrink, formatting and move partition can cause an irreversible lost of data</sub><sup>
   - via linux terminal [(this link)](https://phoenixnap.com/kb/linux-create-partition)
   - in windows:<br>
-    - win+r and write `diskmgmt.msc`
-    - right click on NFTS window partition and shrink it with min 6GB for linux<br>
+    - win+r and write `diskmgmt.msc`<br>
+    - right click on NFTS window partition and shrink it with min 6GB for linux
+<br><br>
 
 - Restart and boot way:<br>
 	a) go to bios and load arch from usb (or set it first boot)<br>
  	b) via windows:<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;1) open win menu and find "startup"<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;2) open "advanced sturtup recovery" (ITA:modifica le opzioni di avvio avanzato)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;3) click on "advanced sturtup" > "use a device" > select your bootable arch usb<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;3) click on "advanced sturtup" > "use a device" > select your bootable arch usb
+<br><br>
 
 <br> <b>[STEP:2/3] PREPARING TO INSTALLATION</b>
 
 - Set Keyboard Layout:<br>
-    `$ loadkeys it` (or other lang)<br>
+    `$ loadkeys it` (or other lang)
+<br><br>
 
 - Test connection:<br>
   `$ ping archlinux.org`<br>
@@ -66,7 +70,8 @@
           3) You can then list all available networks:<br>
           &nbsp;&nbsp;&nbsp;&nbsp;`[iwd]# station DEVICE get-networks`<br>
           4) Finally (or direct if you know params), to connect to a network:<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;`[iwd]# station DEVICE connect SSID`<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;`[iwd]# station DEVICE connect SSID`
+<br><br>
 
 <br> <b>[STEP:3/3] INSTALL LINUX OS</b>
 
@@ -92,15 +97,16 @@
     	- set kernel `linux-zen` (better performance) or the mainline `linux`
     	- set net equal to iso configuration<br>
 	- set timezone on your place (ex: Europe/Rome)
- 	- set NTP on `true`
+ 	- set NTP on `true`<br><br>
 
-	now install 🚀
+	now install 🚀<br><br>
 
     an image of installer (WRONG, I MUST TO UPDATE IMAGE YET!):<br> 
     ![arch installer profile](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PROFILE.jpg)<br>
     ![arch installer partitions](https://github.com/berto-dev/linux-arch-installation-flow/blob/main/ARCHINSTALLER-PARTITIONS-btrf.jpg)<br>
     
-    Installation completed? Don't set nothing other! You are probably in the root of installer... Digit `exit` and `reboot` <br><br>
+    Installation completed? Don't set nothing other! You are probably in the root of installer... Digit `exit` and `reboot`
+<br><br>
 
 - Add asterisks to consolle password, open it and...<br>
 	`$ cd /etc/`<br>
@@ -109,8 +115,8 @@
 	`$ EDITOR=nano visudo`<br>
 	now find or add the string:<br>
 	`Defaults env_reset,pwfeedback`<br>
-	Ctrl + x and S for save<br>
-
+	Ctrl + x and S for save
+<br><br>
 
 - UPDATING... <del>Install windows in boot loader <sup>(if you have windows, obious)</sup></del>
 
@@ -141,7 +147,8 @@
 		<del>`$ bootctl update`<br></del>
 		<del>`$ bootctl list`<br><br></del>
           
-		<del><i>you should probably have windows in the boot list.</i><br><br></del>
+		<del><i>you should probably have windows in the boot list.</i></del>
+<br><br>
 
 - Unlock mirrors:<br>
 	`$ sudo nano /etc/pacman.conf`<br>
@@ -151,20 +158,28 @@
 	Include = /etc/pacman.d/mirrorlist
 	```
 	now you can install from mirrolist in 32/64
+<br><br>
+
+- Set windows on center:<br>
+	`$ gsettings set org.gnome.mutter center-new-windows true`
+<br><br>
 
 - Launch audio services... <sup>(if not running)</sup><br>
   	`$ pactl info | grep "Server Name"` if not result "Name: PulseAudio (on PipeWire 0.XXXX)":<br>
 	`$ systemctl --user --now enable pipewire`<br>
   	`$ systemctl --user list-unit-files | grep -E 'pulse|wire' | awk '{ print $1,"-", $2 }'` (check enables services, is it true?)<br>
-	If you have some problem see [this](https://unix.stackexchange.com/a/390908) for [pavucontrol](https://archlinux.org/packages/extra/x86_64/pavucontrol/) and extras: [easyeffects](https://aur.archlinux.org/packages/easyeffects-git) or [JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux) and [this](https://www.reddit.com/r/pop_os/comments/v3g2w9/comment/ib0dysx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button), [this](https://askubuntu.com/a/1067880), [this](https://srobb.net/pipewire.html) for set output 
+	If you have some problem see [this](https://www.reddit.com/r/pop_os/comments/v3g2w9/comment/ib0dysx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button), [this](https://askubuntu.com/a/1067880), [this](https://srobb.net/pipewire.html) for set output, [this](https://unix.stackexchange.com/a/390908) and you can have support via software by [pavucontrol](https://archlinux.org/packages/extra/x86_64/pavucontrol/) and [easyeffects](https://aur.archlinux.org/packages/easyeffects-git) or [JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux)
+<br><br>
 
 - Launch bluetooth services: <sup>(if not running)</sup><br>
 	`$ systemctl status bluetooth.service` if isn't "active (running)":<br>
 	`$ systemctl enable bluetooth.service`<br>
-	`$ systemctl start bluetooth.service `<br>
+	`$ systemctl start bluetooth.service `
+ <br><br>
 
 - install Git for cloning pro packages<br>
-	`$ sudo pacman -S git base-devel`<br>
+	`$ sudo pacman -S git base-devel`
+<br><br>
 
 - install [Pamac](https://www.osside.net/wp-content/uploads/2023/07/pamacgtk43.webp) for a real [AUR](https://aur.archlinux.org/packages) Store packages management<br><br>
 	- install trizen:<br>
@@ -182,22 +197,25 @@
  	&nbsp;&nbsp;&nbsp;&nbsp;» ALL OFFICIAL REPOS DOWNLOAD: _/var/lib/pacman/local_<br>
  	&nbsp;&nbsp;&nbsp;&nbsp;» AUR DOWNLOAD AD UNSPECIFIED: _/opt_ (suggested for all other software)<br>
  	&nbsp;&nbsp;&nbsp;&nbsp;» FLATPAK DOWNLOAD PACKS: _/var/lib/flatpak_<br>
- 	&nbsp;&nbsp;&nbsp;&nbsp;» DEPENCIES AND LIBS: _/var/lib/_ and _/lib64_<br>
+ 	&nbsp;&nbsp;&nbsp;&nbsp;» DEPENCIES AND LIBS: _/var/lib/_ and _/lib64_
+<br><br>
 
 - add gpu settings {**Ṩ** nvidia-settings}: <sup>(if not installer)</sup><br>
-	`$ sudo pacman -S nvidia-settings`<br>
+	`$ sudo pacman -S nvidia-settings`
+<br><br>
 
-- install snaps backups system {**Ṩ** snapper, snapper-git, grub-btrfs, btrfs-assistant } <br>
-  	1) install packages: `$ sudo pacman -S snapper snapper-git grub-btrfs btrfs-assistant`<br>
-   	2) go in root `$ cd /` and check subvolumes: `$ btrfs subvolume list /`<br>
-	3) if not exist snapshots:<br>
+- install snaps backups system {**Ṩ** snapper, snapper-git, grub-btrfs, btrfs-assistant }<br>
+  	1] install packages: `$ sudo pacman -S snapper snapper-git grub-btrfs btrfs-assistant`<br>
+   	2] go in root `$ cd /` and check subvolumes: `$ btrfs subvolume list /`<br>
+	3] if not exist snapshots:<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ su -` (become the root)<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ cd /` (enter in the root)<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$ snapper -c root create-config /`<br>
- 	4) Now you can open the btrf-assistant, get the snap and set or make new shoots! (suggest: after all this files, make a shoot)
+ 	4] Now you can open the btrf-assistant, get the snap and set or make new shoots! (suggest: after all this files, make a shoot)
+<br><br>
 
-- Install [Network & Network Manager](https://archlinux.org/packages/extra/x86_64/networkmanager/) {**Ṩ** networkmanager}: <br>
-  	Before all: you need to get you good firmware for you wifi card if is a basic installation... In mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi) with all instructions for install inside the .tar pack (goodluck my friends).<br><br>
+- Install [Network & Network Manager](https://archlinux.org/packages/extra/x86_64/networkmanager/) {**Ṩ** networkmanager}: <br><br>
+  	**Before all**: you need to get you good firmware for you wifi card if is a basic installation... In mycase is an AX210 by [Intel](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html)~[data-sheet](https://wireless.wiki.kernel.org/en/users/drivers/iwlwifi) with all instructions for install inside the .tar pack (goodluck my friends).<br>
 
 	if `$ systemctl status NetworkManager` respon "could not be found": 
 	`$ sudo pacman -S networkmanager` <br>
@@ -210,10 +228,12 @@
 	for intel: `$ sudo nano /etc/modprobe.d/iwlwifi.conf` and save inside `ptions iwlwifi power_save=1`<br>
 	other way: `$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not tested, not recommended!)<br>
 	need to refresh wi-fi? :<br>
-	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`<br>
+	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`
+<br><br>
 
 - Now update and reboot system:<br>
-	`$ sudo pacman -Syu && reboot`<br>
+	`$ sudo pacman -Syu && reboot`
+<br><br>
 
 <br><hr><br>
 
@@ -223,9 +243,10 @@
 <b>Make a pratty sudo alias</b><br>
 Open terminal and copy:
 `$ alias super='sudo'`<br>
-`$ super whoami` if respond root, you can use super or sudo ;)<br><br>
+`$ super whoami` if respond root, you can use super or sudo ;)<br>
 add super as a sudo:<br>
-`$ sudo gnome-text-editor /etc/sudoers` and add: `super ALL=(ALL:ALL) ALL` like root. Now you have complete alias for sudo.<br><br>
+`$ sudo gnome-text-editor /etc/sudoers` and add: `super ALL=(ALL:ALL) ALL` like root. Now you have complete alias for sudo.
+<br><br>
 
 <b>install pretty shell:</b><br>
 - dowload [Firacode](https://www.nerdfonts.com/font-downloads) from list<br>
@@ -235,8 +256,8 @@ add super as a sudo:<br>
 	- `$ sudo nano ~/.bashrc`<br>
 	- add line: `eval "$(starship init bash)"` and save<br>
 	- add a theme like this: `$ starship preset bracketed-segments -o ~/.config/starship.toml` or [other... ](https://starship.rs/presets/)<br>
- 	- end all with `$ sudo pacman -S screenfetch && clear && screenfetch` for view somethigs of beautyful<br>
-
+ 	- end all with `$ sudo pacman -S screenfetch && clear && screenfetch` for view somethigs of beautyful
+<br><br>
 
 <b>Set Autologin:</b><br>
 `$ sudo nano /etc/gdm/custom.conf`<br>
@@ -246,22 +267,21 @@ Add into file:
 AutomaticLoginEnable=True
 AutomaticLogin=username
 ```
-
 <br>
 
 <b>Install font manager {**Ṩ** font-manager}:</b><br>
 Open console and:<br>
 - `$ pacman -S font-manager `<br>
-
 - Install/Fix Unicode Charactes:<br>
 	Open Packages folder and add new fonts (make attention to not install the useless fontforge):
 	- `$ git clone https://aur.archlinux.org/font-symbola.git ./symbola && cd ./symbola`<br>
 	- `$ makepkg -si && cd ..`<br>
 	Extra:<br>
 	- `$ sudo pacman -S noto-fonts-emoji` or/and `$ sudo pacman -S ttf-font-awesome`<br>
-	- `$ sudo fc-cache -f -v`<br>
+	- `$ sudo fc-cache -f -v`
+<br><br>
 
-<br><b>Debloat packs:</b><br>
+<b>Debloat packs:</b><br>
 
 <top><sub><i>Note: Rscgn remove all dependencies (dangerous) of pack</i></sub></top><br>
 
@@ -270,7 +290,7 @@ Open console and:<br>
 - `$ sudo pacman -Rusn gnome-maps`<br>
 - `$ sudo pacman -Rusn simple-scan`<br>
 - `$ sudo pacman -Rusn gnome-music`<br>
-- `$ sudo pacman -Rusn gnome-font-viewer` <br> <top><sub><i>(if you font manager)</i></sub></top><br> 
+- `$ sudo pacman -Rusn gnome-font-viewer` <top><sub><i>(if you have font manager)</i></sub></top><br> 
 - `$ sudo pacman -Rusn gnome-calendar`<br>
 - `$ sudo pacman -Rusn gnome-tour`<br>
 - `$ sudo pacman -Rusn malcontent` <top><sub><i>(parental control)</i></sub></top><br>
@@ -281,29 +301,23 @@ Open console and:<br>
 - `$ sudo pacman -Rusn gnome-tour`<br>
 - `$ sudo pacman -Rusn gnome-software` <top><sub><i>(if you use pamac)</i></sub></top><br> 
 - Etc...
+<br><br>
 
-
-<br>
 
 <b>Extend Gnome File shortcuts</b><br>
-
 open `~/.config/gtk-3.0` in File and add you shortcut, for me it is:<br>
-
 - `file:///home/master/Scrivania`<br>
 - `file:///run/media/master/Projects`
+<br><br>
 
-<br>
 
 <b>Expand Files (nautilus):</b><br>
+> all other extensions are on [nautilus-extension in github](https://github.com/topics/nautilus-extension) and [GNOME/Files](https://wiki.archlinux.org/title/GNOME/Files) or direct in pamac!
 Open console and:<br>
 - `$ git clone https://aur.archlinux.org/nautilus-admin.git ./nautilus-admin` {**Ṩ** nautilus-admin}<br>
 - `$ cd nautilus-admin && makepkg && nautilus -q `<br>
-   > note:you can try "sudo pacman -Sy nautilus-admin && nautilus -q"
-
-<br>
-or other extensions on [nautilus-extension in github](https://github.com/topics/nautilus-extension) and [GNOME/Files](https://wiki.archlinux.org/title/GNOME/Files) or direct in pamac!<br>
-
-<br>
+   _note:you can try "sudo pacman -Sy nautilus-admin && nautilus -q"_
+<br><br>
 
 <b>Essentials extensions:</b>
 
@@ -336,7 +350,8 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	`$ makepkg -si && cd ..`<br>
 
  	- [Wine](https://www.winehq.org/) {**Ṩ** wine} [info install](https://wine.htmlvalidator.com/install-wine-on-arch-linux.html)<br>
-	`$ sudo pacman -S wine`<br>
+	`$ sudo pacman -S wine`
+<br><br>
 
 - dev pack (if you need one, we love you!) :
 
