@@ -412,7 +412,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 
 2) open Theme-Pack folder and...<br>
 	- open nautilus and unlock hidden files
-	- copy files of the theme into home/YOURUSERNAME directory
+	- copy files of the theme into home directory
 	- set in the customization (gnome tweaks>apparence) like the screenshot<br>
 
 ![arch installer partitions](https://raw.githubusercontent.com/berto-dev/linux-arch-installation-flow/main/theme.screenshot.png)<br>
