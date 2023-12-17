@@ -111,6 +111,7 @@
 	`Defaults env_reset,pwfeedback`<br>
 	Ctrl + x and S for save<br>
 
+
 - UPDATING... <del>Install windows in boot loader <sup>(if you have windows, obious)</sup></del>
 
 	-   <del>start autoupdater service:<br></del>
@@ -155,7 +156,7 @@
   	`$ pactl info | grep "Server Name"` if not result "Name: PulseAudio (on PipeWire 0.XXXX)":<br>
 	`$ systemctl --user --now enable pipewire`<br>
   	`$ systemctl --user list-unit-files | grep -E 'pulse|wire' | awk '{ print $1,"-", $2 }'` (check enables services, is it true?)<br>
-	If you have some problem see [this](https://unix.stackexchange.com/a/390908) for [pavucontrol](https://archlinux.org/packages/extra/x86_64/pavucontrol/) and extras: [easyeffects](https://aur.archlinux.org/packages/easyeffects-git) or [JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux) and [this](https://askubuntu.com/a/1067880) [this](https://srobb.net/pipewire.html) for set output 
+	If you have some problem see [this](https://unix.stackexchange.com/a/390908) for [pavucontrol](https://archlinux.org/packages/extra/x86_64/pavucontrol/) and extras: [easyeffects](https://aur.archlinux.org/packages/easyeffects-git) or [JDSP4Linux](https://github.com/Audio4Linux/JDSP4Linux) and [this](https://www.reddit.com/r/pop_os/comments/v3g2w9/comment/ib0dysx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button), [this](https://askubuntu.com/a/1067880), [this](https://srobb.net/pipewire.html) for set output 
 
 - Launch bluetooth services: <sup>(if not running)</sup><br>
 	`$ systemctl status bluetooth.service` if isn't "active (running)":<br>
