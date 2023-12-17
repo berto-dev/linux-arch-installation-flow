@@ -415,7 +415,7 @@ or other extensions on [nautilus-extension in github](https://github.com/topics/
 	- copy files of the theme into home directory
 	- set in the customization (gnome tweaks>apparence) like the screenshot<br>
 
-![arch installer partitions](https://raw.githubusercontent.com/berto-dev/linux-arch-installation-flow/main/Theme-Pack-Screenshot.jpg)<br>
+![arch installer partitions](https://raw.githubusercontent.com/berto-dev/linux-arch-installation-flow/main/theme-screenshot.png)<br>
 
 - add Gradience color profile<br>
   open the app and make/save first standard colors, after it you have the forlder and can copy in it:<br>
