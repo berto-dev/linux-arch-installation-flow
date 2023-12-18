@@ -235,6 +235,11 @@
 	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`
 <br><br>
 
+- Fix the probable Gnome Network Manager problem "lost connection" after reboot:<br>
+	`$ sudo systemctl restart iwd` <sup><sub>It's not strictly necessary</sub></sup><br>
+	`$ sudo  systemctl restart NetworkManager && nmcli device wifi connect YOURWIFISSIDORNAME password YOURWIFIPASSWORD`
+<br><br>
+
 - Now update and reboot system:<br>
 	`$ sudo pacman -Syu && reboot`
 <br><br>
