@@ -393,7 +393,7 @@ Open console and:<br>
 	`$ git clone https://aur.archlinux.org/gnome-browser-connector.git ./chrome-connector && cd ./chrome-connector`<br>
 	`$ makepkg -si && cd ..`<br>
 
-	- <del>[Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)</del> (possible conflict with Desktop GTK4 extension)<br>
+	- [Add to desktop](https://extensions.gnome.org/extension/3240/add-to-desktop/)
 	- [Alt Tab Slide](https://extensions.gnome.org/extension/97/coverflow-alt-tab/)<br>
 	- [Arch update alert icon](https://extensions.gnome.org/extension/1010/archlinux-updates-indicator/)<br>
 	 	- note: you need to install `sudo pacnman -S pacman-contrib`, into the options remove classic command with this:<br>
