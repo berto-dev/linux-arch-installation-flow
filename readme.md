@@ -225,19 +225,18 @@
 	`$ sudo pacman -S networkmanager` <br>
   	now... you can have list of networks services via: `systemctl list-unit-files --state=enabled` and, eventually, enable it:<br>
  	`$ sudo systemctl enable NetworkManager`<br>
-	`$ sudo systemctl start NetworkManager`<br>
-  	in some cases, when strict necessary to fix the random down connection:<br>
-	`$ sudo systemctl enable wpa_supplicant.service`<br>
-	now make or edit with `wifi.powersave=1` for disable power save [more info here](https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware) :<br>
-	for intel: `$ sudo nano /etc/modprobe.d/iwlwifi.conf` and save inside `ptions iwlwifi power_save=1`<br>
-	other way: `$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not tested, not recommended!)<br>
-	need to refresh wi-fi? :<br>
-	`$ sudo systemctl restart NetworkManager && sudo systemctl restart wpa_supplicant.service`
+	`$ sudo systemctl start NetworkManager`
 <br><br>
 
 - Fix the probable Gnome Network Manager problem "lost connection" after reboot:<br>
+	_way one (suggested)_:<br>
 	`$ sudo systemctl restart iwd` <sup><sub>It's not strictly necessary</sub></sup><br>
-	`$ sudo  systemctl restart NetworkManager && nmcli device wifi connect YOURWIFISSIDORNAME password YOURWIFIPASSWORD`
+	`$ sudo systemctl restart NetworkManager && nmcli device wifi list && nmcli device wifi connect YOURWIFISSIDORNAME password YOURWIFIPASSWORD`<br>
+	_way complicated:_<br>
+	`$ sudo systemctl enable wpa_supplicant.service`<br>
+	now make or edit with `wifi.powersave=1` for disable power save [more info here](https://wiki.archlinux.org/title/Network_configuration/Wireless#Troubleshooting_drivers_and_firmware) :<br>
+	for intel: `$ sudo nano /etc/modprobe.d/iwlwifi.conf` and save inside `ptions iwlwifi power_save=1`<br>
+	other way: `$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not tested, not recommended!)
 <br><br>
 
 - Now update and reboot system:<br>
