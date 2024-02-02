@@ -315,7 +315,12 @@ Open console and:<br>
 <b>Extend Gnome File shortcuts</b><br>
 open `~/.config/gtk-3.0` in File and add you shortcut, for me it is:<br>
 - `file:///home/master/Scrivania`<br>
-- `file:///run/media/master/Projects`
+- `file:///run/media/master/Projects`<br><br>
+note a part... monuting a disk:
+- terminal: `cd /run/media/<USERNAME>/`<br>
+- terminal: `sudo mount /dev/sda1 ./Projects` or `sudo mount -t ntfs-3g /dev/sda1 ./Projects`  if it's a NTFS<br>
+- `sudo nano /etc/fstab` and add `UUID=9CA24555A24534D4 /run/media/master/Projects ntfs-3g defaults 0 0`
+
 <br><br>
 
 
