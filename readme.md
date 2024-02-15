@@ -205,7 +205,14 @@
 <br><br>
 
 - add gpu settings {**Ṩ** nvidia-settings}: <sup>(if not installer)</sup><br>
-	`$ sudo pacman -S nvidia-settings`
+	`$ sudo pacman -S nvidia-settings`<br>
+
+- add gpu cuda for 3d heavy<br>
+	`$ sudo pacman -S opencl-nvidia`<br>
+	`$ sudo pacman -S opencl-headers`<br>
+ 	`$ sudo pacman -S cuda`<br>
+	`$ sudo pacman -S clinfo` <sup>digit clinfo for gpu informations</sup><br>
+ 	reboot
 <br><br>
 
 - install snaps backups system {**Ṩ** snapper, snapper-git, grub-btrfs, btrfs-assistant }<br>
