@@ -444,7 +444,7 @@ Open console and:<br>
 
 #### Add a simple shell theme packs (it's my simple theme asset)
 
-1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.tar.xz) and unzip it.
+1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.tar.xz) and unzip it.<br><sup>extracting [original pack online](https://github.com/vinceliuice/Fluent-gtk-theme) CLI:` ./install.sh -d '/home/master/.themes' -t grey -c dark --tweaks round`</sup>
 
 2) open Theme-Pack folder and...<br>
 	- open nautilus and unlock hidden files
