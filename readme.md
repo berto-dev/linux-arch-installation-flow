@@ -373,6 +373,14 @@ Open console and:<br>
 	`$ sudo pacman -S wine`
 <br><br>
 
+- extra pack :
+
+	- [archlinux tweak tool](https://github.com/arcolinux/archlinux-tweak-tool)
+ 	- [Decibels](https://github.com/vixalien/decibels) 
+
+<br><br>
+
+
 - dev pack (if you need one, we love you!) :
 
 	- [vscode](https://aur.archlinux.org/packages/visual-studio-code-bin) {**Ṩ** visual-studio-code-bin}<br>
