@@ -246,6 +246,10 @@
 	other way: `$ sudo nano /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf` (not tested, not recommended!)
 <br><br>
 
+- install extra firmware (only if your see the warning: "Possibly missing firmware for module ...")<br>
+	[mkinitcpio-firmware](https://aur.archlinux.org/packages/mkinitcpio-firmware)
+<br><br>
+
 - Now update and reboot system:<br>
 	`$ sudo pacman -Syu && reboot`
 <br><br>
