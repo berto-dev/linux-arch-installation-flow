@@ -457,9 +457,15 @@ Open console and:<br>
 
 #### Add a simple shell theme packs (it's my simple theme asset)
 
-1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.tar.xz) and unzip it.<br><sup>extracting [original pack online](https://github.com/vinceliuice/Fluent-gtk-theme) CLI:` ./install.sh -d '/home/master/.themes' -t grey -c dark --tweaks round`</sup>
+1) download the [theme pack](https://github.com/berto-dev/linux-arch-installation-flow/raw/main/Theme-Pack.tar.xz) and unzip it.<br>
 
-2) open Theme-Pack folder and...<br>
+2) extract [original pack online](https://github.com/vinceliuice/Fluent-gtk-theme) inside '/home/master/.themes'<br>
+
+<sup>or downlad latest pack of [fluent-theme](https://github.com/vinceliuice/Fluent-gtk-theme?tab=readme-ov-file), copy it inside the themes folder, extract it, and open the folder into console and:<br>
+VIA CLI FOR SHELL:` ./install.sh -d '/home/master/.themes' -l --c light --theme grey --size standard --icon simple --tweaks round --tweaks noborder`<br>
+VIA CLI FOR APPS:` ./install.sh -d '/home/master/.themes' -l --c light --theme grey --size standard --icon simple --tweaks round --tweaks noborder`</sup><br>
+
+3) open Theme-Pack folder and...<br>
 	- open nautilus and unlock hidden files
 	- copy files of the theme into home directory
 	- set in the customization (gnome tweaks>apparence) like the screenshot<br>
