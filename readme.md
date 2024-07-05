@@ -213,6 +213,12 @@
  	`$ sudo pacman -S cuda`<br>
 	`$ sudo pacman -S clinfo` <sup>digit clinfo for gpu informations</sup><br>
  	reboot
+
+- active nvidia stand-by services (need reboot):<br>
+	`$ sudo systemctl enable nvidia-suspend.service`<br>
+	`$ sudo systemctl enable nvidia-resume.service`<br>
+	`$ sudo systemctl enable nvidia-hibernate.service`<br>
+ 	you can check it via: `systemctl status nvidia-...`
 <br><br>
 
 - install snaps backups system {**Ṩ** snapper, snapper-git, grub-btrfs, btrfs-assistant }<br>
